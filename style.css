@@ -7,30 +7,25 @@ body {
   padding: 0px;
   box-sizing: border-box;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
 }
 
 /* Cabeçalho */
 header {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 30px;
   background-color: #06003d;
   position: fixed;
   width: 100%;
+  height: 20vh;
+  padding: 20px;
   top: 0;
   z-index: 1000;
-  gap: 20px;
 }
 
-.search {
-  padding: 15px;
-  border-radius: 30px;
-  border: none;
-  width: 15vw;
-}
-/* Border-box para todos elementos before e after */
+/* Border-box para todos elementos before e after*/
 *,
 *::before,
 *::after {
@@ -38,20 +33,22 @@ header {
 }
 /* Carrossel de imagens*/
 .swiper {
-  width: 100%;
-  height: 60vh;
+  max-width: 100%;
+  height: 70vh;
 }
 
 .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 70vh;
 }
 
 .swiper-slide img {
   width: 100%;
   height: auto;
-  height: 90vh;
+  height: 70vh;
   object-fit: cover;
   image-rendering: auto;
   filter: brightness(0.95);
@@ -79,6 +76,13 @@ header {
   opacity: 1;
 }
 
+/* Botão de pesquisa */
+.search {
+  padding: 15px 50px;
+  border: none;
+  border-radius: 30px;
+}
+
 /* Menu de navegação */
 nav {
   display: flex;
@@ -93,7 +97,7 @@ nav a {
   border-radius: 3px;
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   color: #f7d304;
 }
@@ -120,7 +124,7 @@ nav a:hover {
   background-color: #134686;
   padding: 10px 40px;
   text-decoration: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   font-size: 1.3rem;
   border-radius: 3px;
@@ -179,7 +183,7 @@ nav a:hover {
   border: none;
   border-radius: 4px;
 }
-/*Estilo e display do container 1*/
+/*Estilo e display do container 2*/
 .container_2 {
   display: flex;
   flex-wrap: wrap;
@@ -205,12 +209,12 @@ nav a:hover {
 .texto h1 {
   font-size: 3rem;
   color: #f7d304;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
 
 .texto p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
   color: #ffffff;
   word-wrap: break-word;
@@ -227,7 +231,7 @@ nav a:hover {
 }
 
 .container_2::before {
-  content: "";
+  content: '';
   top: 0;
   left: 0;
   position: absolute;
@@ -242,17 +246,77 @@ nav a:hover {
   width: 100%;
   min-height: 50vh;
   background-color: #134686;
-  font-size: "Poppins", sans-serif;
+  font-size: 'Poppins', sans-serif;
   letter-spacing: 1px;
 }
 
-/*Rodapé*/
+/*Aba de contato e endereço*/
 .container_final {
-  display: flex;
-  height: 400px;
-  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 100%;
+  min-height: 50vh;
 }
 
+/*Container endereço*/
+.container_endereço {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 20%;
+}
+
+.container_endereço h2 {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0;
+}
+
+.container_endereço h4 {
+  font-size: 1.2rem;
+  margin-top: 0px;
+}
+
+.container_endereço p {
+  font-family: 'Poppins', sans-serif;
+  margin-top: 0px;
+}
+
+/*Container contato*/
+.container_contato {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+strong {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container_contato ul,
+li,
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  gap: 20px;
+}
+
+li a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 0px;
+}
+/*Container redes sociais */
+.container_redes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+/*Direitos reservados (Rodapé)*/
 footer {
   display: flex;
   justify-content: center;
