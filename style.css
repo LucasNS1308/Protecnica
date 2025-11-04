@@ -13,7 +13,7 @@ body {
 /* Cabeçalho */
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 30px;
   background-color: #06003d;
@@ -21,8 +21,15 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  gap: 20px;
 }
 
+.search {
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  width: 15vw;
+}
 /* Border-box para todos elementos before e after */
 *,
 *::before,
@@ -86,7 +93,7 @@ nav a {
   border-radius: 3px;
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   color: #f7d304;
 }
@@ -113,7 +120,7 @@ nav a:hover {
   background-color: #134686;
   padding: 10px 40px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   font-size: 1.3rem;
   border-radius: 3px;
@@ -198,12 +205,12 @@ nav a:hover {
 .texto h1 {
   font-size: 3rem;
   color: #f7d304;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
 }
 
 .texto p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   letter-spacing: 1px;
   color: #ffffff;
   word-wrap: break-word;
@@ -220,7 +227,7 @@ nav a:hover {
 }
 
 .container_2::before {
-  content: '';
+  content: "";
   top: 0;
   left: 0;
   position: absolute;
@@ -235,7 +242,7 @@ nav a:hover {
   width: 100%;
   min-height: 50vh;
   background-color: #134686;
-  font-size: 'Poppins', sans-serif;
+  font-size: "Poppins", sans-serif;
   letter-spacing: 1px;
 }
 
