@@ -34,7 +34,8 @@ header {
 /* Carrossel de imagens*/
 .swiper {
   max-width: 100%;
-  height: 70vh;
+  min-height: 80vh;
+  margin-top: 0px;
 }
 
 .swiper-slide {
@@ -42,28 +43,16 @@ header {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 70vh;
+  min-height: 80vh;
 }
 
 .swiper-slide img {
   width: 100%;
   height: auto;
-  height: 70vh;
+  height: 80vh;
   object-fit: cover;
   image-rendering: auto;
   filter: brightness(0.95);
-}
-
-/* Botões de paginação */
-.swiper-button-prev,
-.swiper-button-next {
-  color: #f7d304;
-  transition: transform 0.2s;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  transform: scale(1.3);
 }
 
 .swiper-pagination-bullet {
@@ -76,21 +65,14 @@ header {
   opacity: 1;
 }
 
-/* Botão de pesquisa */
-.search {
-  padding: 15px 50px;
-  border: none;
-  border-radius: 30px;
-}
-
 /* Menu de navegação */
 nav {
   display: flex;
   flex-wrap: wrap;
-  background-color: #134686;
+  background-color: #ffffff;
   padding: 15px;
   gap: 60px;
-  border-radius: 3px;
+  border-radius: 30px;
 }
 
 nav a {
@@ -99,11 +81,11 @@ nav a {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
-  color: #f7d304;
+  color: #06003d;
 }
 
 nav a:hover {
-  color: #f1f1f1;
+  color: #134686;
   transform: scale(1.2);
   transition: all 0.2s ease;
 }
@@ -117,7 +99,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin-top: 10%;
 }
 
 .about a {
@@ -137,6 +119,14 @@ nav a:hover {
   transform: matrix3d(1.2);
 }
 
+/* Botão de pesquisa */
+.search {
+  text-align: initial;
+  text-decoration: none;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 30px;
+}
 /* Display dos Containers*/
 
 /*estilo e display container Geral*/
@@ -250,70 +240,72 @@ nav a:hover {
   letter-spacing: 1px;
 }
 
+/* Logo do rodape */
+.logo_footer {
+  display: flex;
+}
+.logo_footer img {
+  width: 30%;
+  margin-left: 55px;
+}
+
 /*Aba de contato e endereço*/
 .container_final {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  width: 100%;
+  gap: 40px;
+  max-width: 1200%;
+  margin: 0px auto;
+  padding: 100px;
   min-height: 50vh;
+  position: relative;
 }
 
-/*Container endereço*/
-.container_endereço {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-left: 20%;
-}
-
-.container_endereço h2 {
-  font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
-  margin-top: 0;
-}
-
-.container_endereço h4 {
-  font-size: 1.2rem;
-  margin-top: 0px;
-}
-
-.container_endereço p {
-  font-family: 'Poppins', sans-serif;
-  margin-top: 0px;
-}
-
-/*Container contato*/
-.container_contato {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-strong {
-  font-size: 2rem;
-  font-family: 'Poppins', sans-serif;
-}
-
-.container_contato ul,
-li,
-a {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  gap: 20px;
-}
-
-li a {
-  text-decoration: none;
-  font-family: 'Poppins', sans-serif;
-  margin-left: 0px;
-}
-/*Container redes sociais */
+/* Layouts das colunas*/
+.container_address,
+.container_contato,
 .container_redes {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: start;
+  width: 100%;
+}
+
+/* estilo dos containers */
+.container_final h2 {
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container_final h4 {
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container_final p {
+  font-size: 1.1rem;
+  font-family: 'poppins', sans-serif;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  display: flex;
+  align-items: initial;
+  flex-direction: column;
+  margin: 0;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: 'poppins', sans-serif;
+  text-decoration: none;
+}
+
+.container_redes {
   gap: 30px;
 }
 /*Direitos reservados (Rodapé)*/
