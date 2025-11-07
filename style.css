@@ -8,64 +8,23 @@ body {
   box-sizing: border-box;
   width: 100%;
   min-height: 100vh;
+  font-family: 'poppins', sans-serif;
 }
-
+/* MENU DE NAVEGAÇÃO */
 header {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
   background-color: #06003d;
-  position: fixed;
   width: 100%;
   height: 20vh;
   padding: 20px;
-  top: 0;
+  margin: 0 auto;
+  position: static;
   z-index: 1000;
 }
 
-/* Border-box para todos elementos before e after*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-/* CAROSSEL DE IMAGENS */
-.swiper {
-  max-width: 100%;
-  min-height: 80vh;
-  margin-top: 0px;
-}
-
-.swiper-slide {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 100%;
-  min-height: 80vh;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  height: 80vh;
-  object-fit: cover;
-  image-rendering: auto;
-  filter: brightness(0.95);
-}
-
-.swiper-pagination-bullet {
-  background: #f7d304;
-  opacity: 0.8;
-}
-
-.swiper-pagination-bullet-active {
-  background: #06003d;
-  opacity: 1;
-}
-
-/* MENU DE NAVEGAÇÃO */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -102,111 +61,123 @@ nav a:hover {
   border: none;
   border-radius: 30px;
 }
-/* LAYOUT SOBRE A EMPRESA */
 
-/* estilo e display container Geral */
-.container_geral {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  align-items: center;
-  min-height: 80vh;
-}
-
-/* Estilo e display container interno */
-.container_interno {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 100px;
-  width: 100%;
-  max-width: 1200px;
+/* Border-box para todos elementos before e after*/
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+/* CAROSSEL DE IMAGENS */
+.swiper {
+  max-width: 100%;
+  min-height: 60vh;
+}
 
-/* Estilo e display do container 1 */
-.container_1 {
+.swiper-slide {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
-  justify-content: space-between;
-  flex-direction: column;
   align-items: center;
-  gap: 0px;
+  width: 100%;
+  min-height: 60vh;
 }
 
-.container_1 p {
-  margin-top: 0px;
+.swiper-slide img {
   width: 100%;
-  text-align: center;
-  font-size: 1.2rem;
+  height: auto;
+  height: 60vh;
+  object-fit: cover;
+  image-rendering: auto;
+  filter: brightness(0.95);
 }
 
-.vid {
-  width: 100%;
-  aspect-ratio: 16 / 9;
+.swiper-pagination-bullet {
+  background: #f7d304;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active {
+  background: #06003d;
+  opacity: 1;
+}
+
+/* LAYOUT SOBRE A EMPRESA */
+
+/* BUTTON SOBRE */
+.container_botao {
+  display: flex;
+  justify-content: center;
+}
+.botao {
+  display: flex;
+  padding: 15px 100px;
+  background-color: #134686;
+  color: #ffffff;
+  box-shadow: 5px 5px 0 #000000;
+  transform: skew(-15deg);
+  text-decoration: none;
   border: none;
   border-radius: 4px;
-}
-/*Estilo e display do container 2*/
-.container_2 {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: space-between;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  text-align: center;
-  z-index: 2;
+  transition: 1s;
+  margin-top: 70px;
+  cursor: pointer;
 }
 
-.container_2,
-.texto {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  min-height: 50vh;
+.botao:hover {
+  transition: 0.5s all ease;
+  box-shadow: 8px 8px 0 #f7d304;
 }
 
-.texto h1 {
-  font-size: 3rem;
+.sobre_span {
+  font-size: 1.2rem;
+  font-family: 'poppins', sans-serif;
+  transform: skew(15deg);
+}
+
+.botao:hover .sobre_span {
   color: #f7d304;
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
 }
 
-.texto p {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  color: #ffffff;
-  word-wrap: break-word;
-  margin-left: 20%;
-  margin-right: 20%;
-}
-
-.container_2 {
-  background-image: url(./img/container2.png);
-  background-size: cover;
-  overflow: hidden;
-  background-position: center;
-  border-radius: 3px;
-}
-
-.container_2::before {
-  content: '';
-  top: 0;
-  left: 0;
-  position: absolute;
+/* CONTAINER SECUNDARIO DO SOBRE */
+.container_sobre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
+  height: 70vh;
+  background-color: #ffffff;
+  margin-top: 10px;
+  padding: 0px;
+  left: 0px;
+  margin: 0px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  height: 90%;
+  background-color: #134686;
+}
+
+.container_sobre1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.container_sobre1 img {
+  width: 100%;
+  height: 70%;
+}
+
+.container_sobre1 span {
+  font-size: 1.5rem;
 }
 /* CARROSSEL E CONTAINER DOS PRODUTOS */
-
 .container_produtos {
   width: 100%;
   min-height: 50vh;
@@ -276,13 +247,14 @@ p {
 .contato_icones {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
+  width: 100%;
 }
 
 .contato_icones a {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
   text-decoration: none;
   color: #000000;
   font-family: 'Poppins', sans-serif;
@@ -291,7 +263,7 @@ p {
 
 .contato_icones a:hover {
   transform: scale(1.1);
-  transition: 1s all ease;
+  transition: 0.3s all ease;
   color: #134686;
 }
 
@@ -308,7 +280,8 @@ p {
 .redes_icones a {
   display: flex;
   align-items: center;
-  gap: 20px;
+  width: 25%;
+  gap: 10px;
   text-decoration: none;
   color: #000000;
   font-size: 1rem;
@@ -317,7 +290,7 @@ p {
 .redes_icones a:hover {
   color: #134686;
   transform: scale(1.1);
-  transition: 1s all ease;
+  transition: 0.3s all ease;
 }
 .redes_icones img {
   width: 32px;
