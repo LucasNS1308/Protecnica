@@ -52,13 +52,13 @@ nav a:hover {
   height: 10vh;
 }
 
-/* Botão de pesquisa */
+/* Botão de pesquisa*/
 .search {
   text-align: initial;
   text-decoration: none;
-  padding: 20px;
+  padding: 10px 50px;
   border: none;
-  border-radius: 4px;
+  border-radius: 30px;
 }
 
 /* Border-box para todos elementos before e after*/
@@ -109,7 +109,8 @@ nav a:hover {
   flex-wrap: wrap;
   width: 100%;
   min-height: 60vh;
-  margin-top: 70px;
+  margin-top: 100px;
+  position: relative;
 }
 
 .container {
@@ -119,7 +120,7 @@ nav a:hover {
   background-image: url(./img/frente.png);
   background-size: cover;
   background-position: center;
-  width: 80%;
+  width: 60%;
   height: 80vh;
   overflow: hidden;
   border-radius: 4px;
@@ -138,7 +139,7 @@ nav a:hover {
 
 .text {
   position: absolute;
-  top: 40%;
+  top: 70%;
   left: 50%;
   transform: translate(-50%);
   z-index: 2;
@@ -158,68 +159,65 @@ nav a:hover {
   margin-left: 150px;
   width: 100%;
   margin: 0px;
+  padding-left: 20px;
 }
 
 .text span {
   font-size: 1.2rem;
-  width: 30%;
-  margin-left: 10px;
-  text-align: left;
+  width: 60%;
+  padding-left: 40px;
+  text-align: start;
+  border-bottom: 1px solid #f7d304;
 }
 
-/* animação */
+/* LAYOUT SOBRE H1 */
+.text_sobre {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.text_sobre {
+  z-index: 3;
+  top: -5%;
+  background-color: #134686;
+  width: 15%;
+  height: 10%;
+}
+
+.text_sobre h1 {
+  color: #ffffff;
+  font-weight: 200;
+}
+
+.text_sobre:hover {
+  background-color: #3e5a7d;
+  transition: 1s all ease-in-out;
+  transform: scale(1.1);
+}
+/* ANIMAÇÃO DO TEXTO  */
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translate(-50%, -50%);
   }
   100% {
-    opacity: 1;
+    opacity: 2;
     transform: translate(-50%, -50%);
   }
 }
 
-/* BUTTON SOBRE */
-.container_botao {
-  display: flex;
-  justify-content: center;
-}
-.botao {
-  display: flex;
-  padding: 15px 100px;
-  background-color: #134686;
-  color: #ffffff;
-  box-shadow: 5px 5px 0 #000000;
-  transform: skew(-15deg);
-  text-decoration: none;
-  border: none;
-  border-radius: 4px;
-  transition: 1s;
-  margin-top: 70px;
-  cursor: pointer;
-}
-
-.botao:hover {
-  transition: 0.5s all ease;
-  box-shadow: 8px 8px 0 #f7d304;
-}
-
-.sobre_span {
-  font-size: 1.2rem;
-  font-family: 'poppins', sans-serif;
-  transform: skew(15deg);
-}
-
-.botao:hover .sobre_span {
-  color: #f7d304;
-}
-
 /* CARROSSEL E CONTAINER DOS PRODUTOS */
 .container_produtos {
+  display: flex;
+  flex-wrap: wrap;
   width: 100%;
   min-height: 50vh;
   font-size: 'Poppins', sans-serif;
   letter-spacing: 1px;
+  margin-top: 10%;
+  background-color: #134686;
 }
 
 /* CONTAINER FUTURO */
@@ -234,6 +232,39 @@ nav a:hover {
   min-height: 70vh;
 }
 
+/* CONTAINER MARCAS */
+.container_marcas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin-bottom: 400px;
+  width: 100%;
+}
+
+.parceiros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  align-items: stretch;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.parceiros img {
+  max-width: 200px;
+  max-height: 90px;
+  object-fit: contain;
+  filter: grayscale(100%) brightness(1);
+  transition: 2s all ease;
+}
+
+.parceiros img:hover {
+  transform: scale(1.1);
+  filter: none;
+}
 /*  CONTAINER FINAL / IMAGEM/ ENDEREÇO/ CONTATO/ REDES SOCIAIS*/
 .container_final {
   position: relative;
@@ -274,7 +305,7 @@ nav a:hover {
   font-family: 'Poppins', sans-serif;
   background-color: #134686;
   padding: 15px;
-  box-shadow: 5px 5px 0 #000000;
+  box-shadow: 3px 3px 0 #a8c8ef;
 
   cursor: pointer;
   border: none;
