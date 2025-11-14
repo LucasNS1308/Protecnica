@@ -209,28 +209,62 @@ nav a:hover {
 }
 
 /* CARROSSEL E CONTAINER DOS PRODUTOS */
-.container_produtos {
-  display: flex;
-  flex-wrap: wrap;
+.categorySwiper {
   width: 100%;
-  min-height: 50vh;
-  font-size: 'Poppins', sans-serif;
-  letter-spacing: 1px;
-  margin-top: 10%;
+  margin: 10%;
   background-color: #134686;
 }
 
-/* CONTAINER FUTURO */
-.container_futuro {
-  margin: 0;
-  left: 0;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  min-height: 70vh;
+.category-slide {
+  cursor: pointer;
+  text-align: center;
 }
+
+.category-img {
+  width: 100%;
+  min-height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.category-slide.active {
+  border-bottom: 3px solid #222;
+  padding-bottom: 5px;
+  transform: scale(1.03);
+}
+
+/* card esqueleto */
+.product-card {
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+}
+
+.product-images {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product-images div {
+  height: 150px;
+  background: #f1f1f1;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+/* CONTAINER FUTURO */
 
 /* CONTAINER MARCAS */
 .container_marcas {
@@ -247,7 +281,6 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   justify-items: center;
-  align-items: stretch;
   gap: 20px;
   max-width: 1200px;
   width: 100%;

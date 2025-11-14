@@ -18,7 +18,7 @@
         <a href="#">Home</a>
         <a href="#sobre">Sobre</a>
         <a href="#Veja mais">Veja mais</a>
-        <a href="/Contato/contato.html">Contato</a>
+        <a href="#contato">Contato</a>
         <a href="/Catalogo/catalogo.html">Catálogo</a>
       </nav>
 
@@ -55,8 +55,6 @@
       </div>
     </div>
 
-    <!--BOTÃO SOBRE-->
-
     <!--CONTAINER SOBRE A PROTECNICA-->
     <div class="container_principal">
       <div class="text_sobre" id="sobre"><h1>Sobre</h1></div>
@@ -72,13 +70,56 @@
       </div>
     </div>
 
-    <!-- Slide-Produtos-->
-    <div class="container_produtos">
-      <h1>Confira nossos produtos</h1>
+    <!---Pagination dos produtos-->
+    <div class="swiper categorySwiper">
+      <h1>Confira nossos produtos e novidades</h1>
+      <div class="swiper-wrapper">
+        <div class="swiper-slide category-slide" data-category="Montadoras">
+          <img class="category-img" src="./" alt="Montadoras" />
+          <span>Exemplo 1</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Area de produção">
+          <img class="category-img" src="./" alt="Area de produção" />
+          <span>Exemplo 2</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Alimentícia">
+          <img class="category-img" src="./" alt="Alimentícia" />
+          <span>Exemplo 3</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Trekking">
+          <img class="category-img" src="./" alt="Trekking" />
+          <span>Exemplo 4</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Construção civil">
+          <img class="category-img" src="./" alt="Construção civil" />
+          <span>Exemplo 5</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Luvas">
+          <img class="category-img" src="./" alt="Luvas" />
+          <span>Exemplo 6</span>
+        </div>
+
+        <div class="swiper-slide category-slide" data-category="Capacetes">
+          <img class="category-img" src="./" alt="Capacetes" />
+          <span>Exemplo 7</span>
+        </div>
+      </div>
+
+      <!-- Navegação -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
 
-    <!--Container futuro-->
-    <div class="container_futuro"></div>
+    <!-- ÁREA DOS PRODUTOS -->
+    <div id="products-container" class="products-grid"></div>
+
+    <!--Container dos Videos-->
+    <div class="container_videos"></div>
     <!---Marcas-->
     <div class="container_marcas">
       <h1>Marcas nacionais e globais</h1>
@@ -89,7 +130,6 @@
         <img src="./img/brascamp.png" alt="brascamp" />
         <img src="./img/danny.png" alt="danny" />
         <img src="./img/delta.png" alt="delta" />
-        <img src="./img/fg.png" alt="fg" />
         <img src="./img/henlau.png" alt="henlau" />
         <img src="./img/hercules.png" alt="hercules" />
         <img src="./img/innpro.png" alt="innpro" />
@@ -97,7 +137,6 @@
         <img src="./img/libus-positivo.png" alt="libus-positivo" />
         <img src="./img/libus.png" alt="libus" />
         <img src="./img/marluvas.png" alt="marluvas" />
-        <img src="./img/mph.png" alt="mph" />
         <img src="./img/mw.png" alt="mw" />
         <img src="./img/next.png" alt="next" />
         <img src="./img/nutriex.png" alt="nutriex" />
@@ -124,7 +163,7 @@
         </div>
 
         <!-- ☎️ Contato -->
-        <div class="container_contato">
+        <div class="container_contato" id="contato">
           <h2>Entre em contato</h2>
           <div class="contato_icones">
             <a href="https://wa.me/553532342504" target="_blank" rel="noopener noreferrer">
