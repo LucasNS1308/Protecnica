@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
-  background-color: #06003d;
+  background-color: #1b1e47;
   width: 100%;
   height: 20vh;
   padding: 20px;
@@ -39,7 +39,7 @@ nav a {
   font-size: 1.2rem;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
-  color: #06003d;
+  color: #1b1e47;
 }
 
 nav a:hover {
@@ -97,7 +97,7 @@ nav a:hover {
 }
 
 .swiper-pagination-bullet-active {
-  background: #06003d;
+  background: #1b1e47;
   opacity: 1;
 }
 
@@ -120,10 +120,10 @@ nav a:hover {
   background-image: url(./img/frente.png);
   background-size: cover;
   background-position: center;
-  width: 60%;
-  height: 80vh;
+  width: 80%;
+  height: 70vh;
   overflow: hidden;
-  border-radius: 4px;
+  border-radius: 1px;
 }
 
 .container::before {
@@ -173,6 +173,7 @@ nav a:hover {
 /* LAYOUT SOBRE H1 */
 .text_sobre {
   display: flex;
+  align-items: center;
   position: absolute;
   justify-content: center;
   border-radius: 4px;
@@ -181,8 +182,8 @@ nav a:hover {
 .text_sobre {
   z-index: 3;
   top: -5%;
-  background-color: #134686;
-  width: 15%;
+  background-color: #1b1e47;
+  width: 8%;
   height: 10%;
 }
 
@@ -193,8 +194,8 @@ nav a:hover {
 
 .text_sobre:hover {
   background-color: #3e5a7d;
-  transition: 1s all ease-in-out;
-  transform: scale(1.1);
+  transition: 0.5s all ease-in-out;
+  transform: scale(1.05);
 }
 /* ANIMAÇÃO DO TEXTO  */
 @keyframes fadeIn {
@@ -208,61 +209,98 @@ nav a:hover {
   }
 }
 
-/* CARROSSEL E CONTAINER DOS PRODUTOS */
-.categorySwiper {
-  width: 100%;
-  margin: 10%;
-  background-color: #134686;
+/* CONTAINER DO COMPONENTE */
+.category-section {
+  width: 90%;
+  margin: 10% auto;
 }
 
+/* Título do bloco */
+.category-section h1 {
+  text-align: left;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* ÁREA DO CARROSSEL */
+.categorySwiper {
+  width: 100%;
+  padding: 20px 0;
+  min-height: 20vh;
+}
+
+/* Cada categoria (slide) */
 .category-slide {
   cursor: pointer;
   text-align: center;
+  display: flex;
+  flex-direction: column; /* imagem + nome em coluna */
+  align-items: center;
+  gap: 10px; /* espaço entre img e texto */
 }
 
+/* Imagem da categoria */
 .category-img {
   width: 100%;
-  min-height: 160px;
+  height: 120px;
   object-fit: cover;
-  border-radius: 10px;
+  background: #ddd; /* cinza como placeholder */
+  border-radius: 6px;
 }
 
-.category-slide.active {
-  border-bottom: 3px solid #222;
+/* Nome da categoria */
+.category-slide span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* Categoria ativa (igual o print da empresa) */
+.category-slide.active span {
+  border-bottom: 3px solid #e0811d;
   padding-bottom: 5px;
-  transform: scale(1.03);
+  font-weight: bold;
 }
 
-/* card esqueleto */
+/* AREA DOS PRODUTOS */
+.products-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* CARD DO PRODUTO */
 .product-card {
+  display: flex;
+  flex-direction: column; /* imagem + nome + desc - vertical */
+  align-items: center;
   padding: 20px;
+  background: #fff;
   border-radius: 10px;
   border: 1px solid #ddd;
-  background: #fff;
-  text-align: center;
 }
 
+/* Área onde ficarão suas imagens futuras */
 .product-images {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  width: 100%;
+  height: 180px;
+  background: #f5f5f5; /* placeholder */
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
-.product-images div {
-  height: 150px;
-  background: #f1f1f1;
-  border-radius: 8px;
-}
-
+/* Nome do produto */
 .product-card h3 {
   font-size: 18px;
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+/* Descrição */
 .product-card p {
   font-size: 14px;
   color: #555;
-  margin-top: 10px;
+  text-align: center;
 }
 /* CONTAINER FUTURO */
 
@@ -336,7 +374,7 @@ nav a:hover {
 .container_final h2 {
   font-size: 2rem;
   font-family: 'Poppins', sans-serif;
-  background-color: #134686;
+  background-color: #1b1e47;
   padding: 15px;
   box-shadow: 3px 3px 0 #a8c8ef;
 
@@ -419,9 +457,8 @@ footer {
 }
 
 footer {
-  background-color: #06003d;
   height: 40px;
-  color: #ffffff;
+  color: #1b1e47;
   font-size: 1rem;
   font-family: 'poppins', sans-serif;
 }
