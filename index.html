@@ -70,56 +70,101 @@
       </div>
     </div>
 
-    <!---Pagination dos produtos-->
+    <!---CONTAINER DOS PRODUTOS-->
     <div class="category-section">
       <h1>Confira nossos produtos e novidades</h1>
+
       <div class="swiper categorySwiper">
         <div class="swiper-wrapper">
-          <div class="swiper-slide category-slide" data-category="Montadoras">
-            <img class="category-img" src="./" alt="Montadoras" />
-            <span>Exemplo 1</span>
+          <div class="swiper-slide category-slide" data-category="altura">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/altura.jpg" alt="altura" />
+            </div>
+            <span>Trabalho em altura</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="Area de produção">
-            <img class="category-img" src="./" alt="Area de produção" />
-            <span>Exemplo 2</span>
+          <div class="swiper-slide category-slide" data-category="industria">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/industria.jpg" alt="industria" />
+            </div>
+            <span>Indústria</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="Alimentícia">
-            <img class="category-img" src="./" alt="Alimentícia" />
-            <span>Exemplo 3</span>
+          <div class="swiper-slide category-slide" data-category="alimenticia">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/food.jpg" alt="alimenticia" />
+            </div>
+            <span>Alimentícia</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="Trekking">
-            <img class="category-img" src="./" alt="Trekking" />
-            <span>Exemplo 4</span>
+          <div class="swiper-slide category-slide" data-category="civil">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/civil.jpg" alt="civil" />
+            </div>
+            <span>Construção civil</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="Cinto ">
-            <img class="category-img" src="./img/cinto.jpg" alt="Cinto" />
-            <span>Cinto de segurança</span>
+          <div class="swiper-slide category-slide" data-category="laboratorio">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/quimica.jpg" alt="laboratorio" />
+            </div>
+            <span>Laboratório / Área química</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="luvas">
-            <img class="category-img" src="./img/luvas.jpg" alt="luvas" />
-            <span>Luvas</span>
+          <div class="swiper-slide category-slide" data-category="soldagem">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/soldagem.jpg" alt="soldagem" />
+            </div>
+            <span>Soldagem / Metalurgia</span>
           </div>
 
-          <div class="swiper-slide category-slide" data-category="Capacetes">
-            <img class="category-img" src="./img/capacete.jpg" alt="Capacetes" />
-            <span>Capacetes</span>
+          <div class="swiper-slide category-slide" data-category="eletrica">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/eletrica.jpg" alt="eletrica" />
+            </div>
+            <span>Eletricidade</span>
+          </div>
+
+          <div class="swiper-slide category-slide" data-category="respirar">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/respiratorio.jpg" alt="respirar" />
+            </div>
+            <span>Proteção respiratória</span>
+          </div>
+
+          <div class="swiper-slide category-slide" data-category="limpeza">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/limpeza.jpg" alt="limpeza" />
+            </div>
+            <span>Limpeza e saneamento</span>
+          </div>
+
+          <div class="swiper-slide category-slide" data-category="agro">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/agro.jpg" alt="agro" />
+            </div>
+            <span>Agro / Agricultura / Florestal</span>
+          </div>
+
+          <div class="swiper-slide category-slide" data-category="armazem">
+            <div class="category-img-wrapper">
+              <img class="category-img" src="./img/logistica.jpg" alt="armazem" />
+            </div>
+            <span>Logística / Armazém / Movimentação de carga</span>
           </div>
         </div>
-      </div>
 
-      <!-- Navegação -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
+        <!-- BOTÕES -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
     </div>
 
-    <!-- ÁREA DOS PRODUTOS -->
-    <div id="products-container" class="products-grid"></div>
-
+    <!--CARDS DO PRODUTOS-->
+    <div id="products-section" class="products-section">
+      <button id="close-products" class="close-products-btn">×</button>
+      <div id="products-container" class="products-grid"></div>
+    </div>
     <!--Container dos Videos-->
     <div class="container_videos"></div>
     <!---Marcas-->
