@@ -109,7 +109,7 @@ nav a:hover {
   flex-wrap: wrap;
   width: 100%;
   min-height: 60vh;
-  margin-top: 100px;
+  margin-top: 10%;
   position: relative;
 }
 
@@ -212,17 +212,17 @@ nav a:hover {
 /* CONTAINER DAS SEÇÕES DOS PRODUTOS */
 .category-section {
   width: 90%;
-  margin: 5% auto;
+  margin: 10% auto;
 }
 
 /* TITULO DA SEÇÃO */
 .category-section h1 {
   text-align: left;
   margin-bottom: 50px;
-  font-size: 28px;
+  font-size: 2rem;
   color: #134686;
   border-bottom: #f7d304 2px solid;
-  width: 30%;
+  width: 35%;
 }
 
 /* ÁREA DO CARROSSEL */
@@ -296,7 +296,6 @@ nav a:hover {
 
 /* AREA DOS PRODUTOS */
 .products-grid {
-  margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -324,13 +323,17 @@ nav a:hover {
   position: relative;
   width: 100%;
   margin-top: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 /* Botão X */
 #close-products {
   position: absolute;
   top: 10px;
-  right: 200px;
+  right: 50%;
+  transform: translateX(600px);
   background: #fff;
   border: 2px solid #ccc;
   width: 30px;
@@ -408,6 +411,18 @@ nav a:hover {
   transform: scale(1.1);
   filter: none;
 }
+
+/* CONTAINER DE VIDEOS */
+.container_videos {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
 /*  CONTAINER FINAL / IMAGEM/ ENDEREÇO/ CONTATO/ REDES SOCIAIS*/
 .container_final {
   position: relative;

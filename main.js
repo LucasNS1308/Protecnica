@@ -178,6 +178,7 @@ function loadProducts(category) {
 // BOTÃO DE FECHAR OS CARDS
 document.getElementById('close-products').addEventListener('click', () => {
   document.getElementById('products-section').style.display = 'none';
+  document.getElementById('close-products').style.display = 'none';
 });
 
 // CLIQUE NAS CATEGORIAS
