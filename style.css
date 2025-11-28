@@ -388,22 +388,22 @@ nav a:hover {
 /* CONTAINER DE VIDEOS */
 .container_vid {
   width: 100%;
-  height: 70vh;
+  padding: 50px 0;
   background-color: #1b1e47;
 }
 
 .container_sec_vid {
   width: 100%;
-  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
 .container_sec_vid iframe {
   width: 100%;
-  max-width: 550px;
+  max-width: 450px;
   aspect-ratio: 16 / 9;
   border-radius: 4px;
   border: none;
@@ -415,12 +415,7 @@ nav a:hover {
   color: #fff;
   transition: 1s all ease;
   text-align: center;
-  padding-top: 50px;
-  transition: 1s all ease-in-out;
-}
-
-h1:hover {
-  transform: scale(1.1);
+  padding-bottom: 100px;
 }
 
 /* CONTAINER MARCAS */
@@ -430,6 +425,7 @@ h1:hover {
   align-items: center;
   justify-items: center;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 10% auto;
   width: 100%;
 }
@@ -466,6 +462,7 @@ h1:hover {
   position: relative;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
   min-height: 50vh;
@@ -476,10 +473,10 @@ h1:hover {
 .container_final_sec {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-area: center;
   max-width: 1200px;
   gap: 40px;
-  width: 80%;
-  margin-top: 50px;
+  margin: 50px auto;
 }
 /* Layouts das colunas*/
 .container_address,
@@ -500,8 +497,7 @@ h1:hover {
 
 /* estilo dos containers */
 .container_final h2 {
-  font-size: 1.6rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
   border: none;
   color: #ffffff;
 }
@@ -509,8 +505,7 @@ h1:hover {
 .container_address h4,
 p {
   margin: 0px;
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
   color: #fff;
 }
 
@@ -539,7 +534,7 @@ p {
 }
 
 .contato_icones img {
-  width: 32px;
+  width: 25px;
 }
 
 .redes_icones {
@@ -552,7 +547,6 @@ p {
 .redes_icones a {
   display: flex;
   align-items: center;
-  width: 25%;
   gap: 10px;
   text-decoration: none;
   color: #000000;
@@ -565,7 +559,7 @@ p {
   transition: 0.3s all ease;
 }
 .redes_icones img {
-  width: 32px;
+  width: 25px;
 }
 /*Direitos reservados (Rodapé)*/
 footer {
