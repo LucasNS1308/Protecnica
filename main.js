@@ -18,149 +18,479 @@ const swiper = new Swiper('.mySwiper', {
 // CATEGORIAS
 const categories = {
   altura: [
-    { name: 'Capacete bombeiro', desc: 'Descrição do produto...', images: [] },
-    { name: 'Luva de couro', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: ',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   industria: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   alimenticia: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   civil: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   laboratorio: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   soldagem: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   eletrica: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   respirar: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   limpeza: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   agro: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 
   armazem: [
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
-    { name: '', desc: 'Descrição do produto...', images: [] },
+    {
+      name: '',
+      desc: 'Descrição do produto...',
+      ca: 'Ca: 3658224',
+      ref: 'Referência:',
+      images: [],
+    },
   ],
 };
 
-// GERAR OS CARDS QUANDO CLICA NA CATEGORIA
+// Função para marcar categoria ativa visualmente
+function markActiveCategory(category) {
+  document.querySelectorAll('.category-slide').forEach((s) => {
+    s.classList.toggle('active', s.dataset.category === category);
+  });
+}
 
+// Função para carregar produtos e mostrar seção
 function loadProducts(category) {
   const section = document.getElementById('products-section');
   const container = document.getElementById('products-container');
+  const closeBtn = document.getElementById('close-products');
+
   const products = categories[category] || [];
 
-  // mostra a seção dos cards
+  // mostra a seção e botão fechar
   section.style.display = 'block';
+  closeBtn.style.display = 'block';
+
+  section.scrollIntoView({ behavior: 'smooth' });
 
   container.innerHTML = products
     .map(
@@ -169,64 +499,48 @@ function loadProducts(category) {
         <h3>${product.name}</h3>
         <div class="product-images"></div>
         <p>${product.desc}</p>
+        <p>${product.ca}</p>
+        <p>${product.ref}</p>
       </div>
     `
     )
     .join('');
 }
 
-// BOTÃO DE FECHAR OS CARDS
+// Botão fechar — esconder seção e botão ao clicar
 document.getElementById('close-products').addEventListener('click', () => {
-  document.getElementById('products-section').style.display = 'block';
-  document.getElementById('close-products').style.display = 'block';
+  document.getElementById('products-section').style.display = 'none';
+  document.getElementById('close-products').style.display = 'none';
 });
 
-// CLIQUE NAS CATEGORIAS
+// Evento clique nas categorias
 document.querySelectorAll('.category-slide').forEach((slide) => {
   slide.addEventListener('click', function () {
-    document.querySelectorAll('.category-slide').forEach((s) => s.classList.remove('active'));
-    this.classList.add('active');
-
-    const currentCategory = this.dataset.category;
+    currentCategory = this.dataset.category;
+    markActiveCategory(currentCategory);
     loadProducts(currentCategory);
   });
 });
 
-// CARROSSEL DAS CATEGORIAS
+// Inicialização: categoria padrão
+let currentCategory = 'altura'; // categoria válida
+markActiveCategory(currentCategory);
+loadProducts(currentCategory);
+
+// Carrossel categoria
 const categorySwiper = new Swiper('.categorySwiper', {
-  slidesPerView: '3',
+  slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
-
-  //  deixa deslizando sozinho continuamente
-  speed: 0, // quanto maior, mais lento/mais suave
+  speed: 0,
   autoplay: {
-    delay: 0, // sem intervalo
+    delay: 0,
     disableOnInteraction: false,
   },
-
-  //  deixa o movimento livre sem travar
   freeMode: false,
   freeModeMomentum: false,
-
-  // mantém os botões funcionando
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
-
-// CATEGORIA PADRÃO
-let currentCategory = 'categoria1';
-loadProducts(currentCategory);
-
-// CLIQUE NAS CATEGORIAS
-document.querySelectorAll('.category-slide').forEach((slide) => {
-  slide.addEventListener('click', function () {
-    document.querySelectorAll('.category-slide').forEach((s) => s.classList.remove('active'));
-    this.classList.add('active');
-
-    currentCategory = this.dataset.category;
-    loadProducts(currentCategory);
-  });
 });

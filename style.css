@@ -2,15 +2,17 @@ html {
   scroll-behavior: smooth;
 }
 
+html,
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   font-family: 'poppins', sans-serif;
 }
 /* MENU DE NAVEGAÇÃO */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -27,19 +29,18 @@ header {
 nav {
   display: flex;
   flex-wrap: wrap;
-  background-color: #ffffff;
-  padding: 20px;
   gap: 60px;
-  border-radius: 4px;
 }
 
 nav a {
-  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 1px;
-  color: #1b1e47;
+  color: #fff;
 }
 
 nav a:hover {
@@ -49,16 +50,7 @@ nav a:hover {
 }
 
 .logo img {
-  height: 10vh;
-}
-
-/* Botão de pesquisa*/
-.search {
-  text-align: initial;
-  text-decoration: none;
-  padding: 10px 50px;
-  border: none;
-  border-radius: 30px;
+  min-height: 100%;
 }
 
 /* Border-box para todos elementos before e after*/
@@ -183,8 +175,8 @@ nav a:hover {
   z-index: 3;
   top: -5%;
   background-color: #1b1e47;
-  width: 8%;
-  height: 10%;
+  min-width: 8%;
+  min-height: 10%;
 }
 
 .text_sobre h1 {
@@ -211,7 +203,7 @@ nav a:hover {
 
 /* CONTAINER DAS SEÇÕES DOS PRODUTOS */
 .category-section {
-  width: 80%;
+  width: 70%;
   margin: 10% auto;
 }
 
@@ -228,7 +220,7 @@ nav a:hover {
 /* ÁREA DO CARROSSEL */
 .categorySwiper {
   width: 100%;
-  padding: 20px 0;
+  padding: 10px 0;
   min-height: 50%;
 }
 
@@ -331,13 +323,14 @@ nav a:hover {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  display: none;
 }
 
 /* Botão X */
 #close-products {
   position: absolute;
   top: 10px;
-  right: 50%;
+  right: 45%;
   transform: translateX(600px);
   background: #fff;
   border: 2px solid #ccc;
@@ -380,12 +373,14 @@ nav a:hover {
 
 /* Descrição */
 .product-card p {
+  width: 100%;
   font-size: 14px;
   color: #555;
-  text-align: center;
+  text-align: initial;
 }
 
 /* CONTAINER DE VIDEOS */
+
 .container_vid {
   width: 100%;
   padding: 50px 0;
@@ -418,7 +413,20 @@ nav a:hover {
   padding-bottom: 100px;
 }
 
+/* CONTAINER IMPORTANCIA DO EPI */
+
+.container_epi {
+  width: 100%;
+  min-height: 70vh;
+}
+.container_sec_epi {
+  width: 100%;
+  height: 50%;
+  max-width: 1200px;
+}
+
 /* CONTAINER MARCAS */
+
 .container_marcas {
   display: flex;
   justify-content: center;
@@ -458,6 +466,7 @@ nav a:hover {
 }
 
 /*  CONTAINER FINAL / IMAGEM/ ENDEREÇO/ CONTATO/ REDES SOCIAIS*/
+
 .container_final {
   position: relative;
   display: flex;
