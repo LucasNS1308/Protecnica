@@ -1,36 +1,53 @@
-// Inicializa o carrossel Swiper
+// CAROSSEL COM IMAGENS (HEADER)
 const swiper = new Swiper('.mySwiper', {
-  loop: true, // Faz o carrossel voltar ao início quando termina
+  loop: true,
   autoplay: {
-    delay: 7000, // Troca de slide a cada 7 segundos
-    disableOnInteraction: false, // Continua passando mesmo se o usuário clicar
+    delay: 7000,
+    disableOnInteraction: false,
   },
   pagination: {
-    el: '.swiper-pagination', // Ativa as bolinhas
-    clickable: true, // Permite clicar nas bolinhas
+    el: '.swiper-pagination',
+    clickable: true,
   },
 
-  //effect: 'slide', Tipo de transição (pode usar 'fade' para suavizar)
   effect: 'fade',
-  slidesPerView: 1, // Mostra 1 slide por vez
+  slidesPerView: 1,
 });
 
-// CATEGORIAS
+// CARROSSEL PRODUTOS (SEÇÃO PRODUTOS)
+const categorySwiper = new Swiper('.categorySwiper', {
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  speed: 0,
+  autoplay: {
+    delay: 0,
+    disableOnInteraction: false,
+  },
+  freeMode: false,
+  freeModeMomentum: false,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+// CATEGORIAS DOS PRODUTOS
 const categories = {
   altura: [
     {
-      name: '',
+      name: 'Capacete',
       desc: 'Descrição do produto...',
       ca: 'Ca: ',
       ref: 'Referência:',
-      images: [],
+      images: ['./produtos/14161.png'],
     },
     {
-      name: '',
+      name: 'Luva',
       desc: 'Descrição do produto...',
       ca: 'Ca: ',
       ref: 'Referência:',
-      images: [],
+      images: ['./produtos/13932.png'],
     },
     {
       name: '',
@@ -471,76 +488,122 @@ const categories = {
   ],
 };
 
-// Função para marcar categoria ativa visualmente
-function markActiveCategory(category) {
-  document.querySelectorAll('.category-slide').forEach((s) => {
-    s.classList.toggle('active', s.dataset.category === category);
-  });
-}
+// Elementos DOM
+const productsSection = document.getElementById('products-section');
+const productsContainer = document.getElementById('products-container');
+const closeBtn = document.getElementById('close-products');
 
-// Função para carregar produtos e mostrar seção
-function loadProducts(category) {
-  const section = document.getElementById('products-section');
-  const container = document.getElementById('products-container');
-  const closeBtn = document.getElementById('close-products');
+// FUNÇÃO: mostra skeleton loading
 
-  const products = categories[category] || [];
-
-  // mostra a seção e botão fechar
-  section.style.display = 'block';
-  closeBtn.style.display = 'block';
-
-  section.scrollIntoView({ behavior: 'smooth' });
-
-  container.innerHTML = products
-    .map(
-      (product) => `
+function showSkeleton() {
+  const skeletons = Array(6)
+    .fill(
+      `
       <div class="product-card">
-        <h3>${product.name}</h3>
-        <div class="product-images"></div>
-        <p>${product.desc}</p>
-        <p>${product.ca}</p>
-        <p>${product.ref}</p>
+        <div class="skeleton skel-img"></div>
+        <div class="skeleton skel-line"></div>
+        <div class="skeleton skel-line"></div>
+        <div class="skeleton skel-line"></div>
       </div>
     `
     )
     .join('');
+
+  productsContainer.innerHTML = skeletons;
 }
 
-// Botão fechar — esconder seção e botão ao clicar
-document.getElementById('close-products').addEventListener('click', () => {
-  document.getElementById('products-section').style.display = 'none';
-  document.getElementById('close-products').style.display = 'none';
-});
+// FUNÇÃO: carregar produtos
 
-// Evento clique nas categorias
+function loadProducts(category) {
+  productsSection.classList.add('visible');
+
+  showSkeleton();
+
+  setTimeout(() => {
+    const items = categories[category] || [];
+
+    productsContainer.innerHTML = items
+      .map((p, i) => {
+        const imgs = p.images.map((src) => `<img src="${src}" alt="${p.name}">`).join('');
+
+        return `
+          <div class="product-card" style="animation-delay:${i * 0.1}s">
+            <h3>${p.name}</h3>
+
+            <div class="product-images">
+              ${imgs}
+            </div>
+
+            <p>${p.desc}</p>
+            <p>${p.ca}</p>
+            <p>${p.ref}</p>
+          </div>
+        `;
+      })
+      .join('');
+  }, 600);
+}
+
+// EVENTO: clique nas categorias
+
 document.querySelectorAll('.category-slide').forEach((slide) => {
-  slide.addEventListener('click', function () {
-    currentCategory = this.dataset.category;
-    markActiveCategory(currentCategory);
-    loadProducts(currentCategory);
+  slide.addEventListener('click', () => {
+    const category = slide.dataset.category;
+    loadProducts(category);
   });
 });
 
-// Inicialização: categoria padrão
-let currentCategory = 'altura'; // categoria válida
-markActiveCategory(currentCategory);
-loadProducts(currentCategory);
+// FECHAR ÁREA DOS CARDS
 
-// Carrossel categoria
-const categorySwiper = new Swiper('.categorySwiper', {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
-  speed: 0,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  freeMode: false,
-  freeModeMomentum: false,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
+closeBtn.addEventListener('click', () => {
+  productsSection.classList.remove('visible');
+});
+
+// EFEITO NO HEADER
+const menu = document.getElementById('menu');
+const links = document.querySelectorAll('.nav-link');
+const underline = document.querySelector('.menu-underline');
+
+let currentRect = null;
+
+links.forEach((link) => {
+  link.addEventListener('mouseenter', () => {
+    const rect = link.getBoundingClientRect();
+    const menuRect = menu.getBoundingClientRect();
+
+    const left = rect.left - menuRect.left;
+    const width = rect.width;
+
+    if (currentRect) {
+      const currentLeft = currentRect.left;
+      const currentWidth = currentRect.width;
+
+      // se o novo item está À DIREITA → expandir até cobrir tudo até lá
+      if (left > currentLeft) {
+        underline.style.left = currentLeft + 'px';
+        underline.style.width = left + width - currentLeft + 'px';
+      } else {
+        // se o novo item está À ESQUERDA → expandir até a esquerda
+        underline.style.left = left + 'px';
+        underline.style.width = currentLeft + currentWidth - left + 'px';
+      }
+
+      // depois de um mini delay, encolher para encaixar exatamente
+      setTimeout(() => {
+        underline.style.left = left + 'px';
+        underline.style.width = width + 'px';
+      }, 150);
+    } else {
+      // primeira vez → só posiciona
+      underline.style.left = left + 'px';
+      underline.style.width = width + 'px';
+    }
+
+    currentRect = { left, width };
+  });
+});
+
+// opcional: tira underline ao sair do menu
+menu.addEventListener('mouseleave', () => {
+  underline.style.width = '0px';
 });

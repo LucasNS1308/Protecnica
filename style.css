@@ -43,10 +43,32 @@ nav a {
   color: #fff;
 }
 
-nav a:hover {
-  color: #134686;
-  transform: scale(1.2);
-  transition: all 0.2s ease;
+#menu {
+  position: relative;
+  display: flex;
+  gap: 50px;
+  padding-bottom: 10px;
+}
+
+.nav-link {
+  padding: 5px 0;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.menu-underline {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background: #3498db;
+
+  /* começa invisível */
+  width: 0;
+  left: 0;
+
+  /* anima tanto deslocamento quanto expansão */
+  transition: width 0.5s ease, left 0.5s ease;
 }
 
 .logo img {
@@ -212,7 +234,7 @@ nav a:hover {
   text-align: left;
   margin-bottom: 50px;
   font-size: 2rem;
-  color: #134686;
+  color: #1b1e47;
   border-bottom: #f7d304 2px solid;
   width: 50%;
 }
@@ -242,7 +264,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 6px;
+  border-radius: 2px;
   height: 40vh;
 }
 
@@ -268,18 +290,18 @@ nav a:hover {
 
 /* CATEGORIA ATIVA NO MOMENTO */
 .category-slide.active span {
-  border-bottom: 10px solid #e0811d;
+  border-bottom: 1px solid #e0811d;
   padding-bottom: 5px;
   font-weight: bold;
 }
 
-/* BOTÕES DO SWIPER */
+/* BOTÕES DO SWIPER*/
 .categorySwiper .swiper-button-next,
 .categorySwiper .swiper-button-prev {
   color: #fff;
   width: 40px;
   height: 60px;
-  background-color: #134686;
+  background-color: #1b1e47;
   border-radius: 1px;
 }
 
@@ -291,94 +313,138 @@ nav a:hover {
   right: 5px;
 }
 
-/* AREA DOS PRODUTOS */
+/* SEÇÃO DE PRODUTOS*/
+.products-section {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  margin-top: 40px;
+  position: relative;
+}
+
+.products-section.visible {
+  display: flex;
+  opacity: 1;
+}
+
+/* GRID DOS PRODUTOS*/
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
-  padding: 10px;
   width: 100%;
   max-width: 1200px;
-  margin: 40px auto;
+  padding: 10px;
+  justify-items: center;
 }
 
-/* CARD DO PRODUTO */
+/* CARD DO PRODUTO*/
+
 .product-card {
-  position: relative;
+  width: 100%;
+  max-width: 260px;
+  min-height: 360px;
+  background-color: #fff;
+  border-radius: 12px;
+  border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  margin: 0;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeCard 0.4s ease forwards;
 }
 
-/* CLOSE TO CARD */
-.products-section {
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  display: none;
-}
-
-/* Botão X */
-#close-products {
-  position: absolute;
-  top: 10px;
-  right: 45%;
-  transform: translateX(600px);
-  background: #fff;
-  border: 2px solid #ccc;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  font-size: 20px;
-  cursor: pointer;
-  line-height: 26px;
-  text-align: center;
-  transition: 0.2s;
-  display: none;
-}
-
-#close-products:hover {
-  background: #ff4444;
-  color: #fff;
-  border-color: #ff4444;
-}
-/* imagens do card */
 .product-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 180px;
-  background: #f5f5f5;
+  overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
-.category-img:hover {
-  filter: brightness(1.2);
-  transform: scale(1.1);
-}
-
-/* Nome do produto */
-.product-card h3 {
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 0px;
-}
-
-/* Descrição */
-.product-card p {
+.product-images img {
   width: 100%;
-  font-size: 14px;
-  color: #555;
-  text-align: initial;
+  height: 100%;
+  object-fit: contain;
+}
+.product-card h3 {
+  color: #aaa;
+  font-size: 1rem;
+  text-align: center;
+  margin: 10px auto;
 }
 
+.product-card p {
+  color: #aaa;
+  font-size: 12px;
+  margin-left: 10px;
+}
+@keyframes fadeCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SKELETON LOADING (shimmer) */
+
+.skeleton {
+  background: linear-gradient(90deg, #e3e3e3 25%, #f5f5f5 50%, #e3e3e3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+  border-radius: 10px;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skel-img {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 15px;
+}
+
+.skel-line {
+  width: 80%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+/*BOTÃO FECHAR*/
+
+.close-products-btn {
+  position: absolute;
+  top: 10px;
+  right: 15%;
+  background: #fff;
+  border: 2px solid #aaa;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 26px;
+  transition: 0.2s;
+}
+
+.close-products-btn:hover {
+  background: #ff4444;
+  border-color: #ff4444;
+  color: #fff;
+}
 /* CONTAINER DE VIDEOS */
 
 .container_vid {
