@@ -492,13 +492,11 @@ nav a {
   justify-items: center;
   width: 100%;
   border-radius: 10px;
-  padding: 40px 0;
   gap: 50px;
 }
 
 .card {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   height: 300px;
   position: relative;
   border-radius: inherit;
@@ -512,7 +510,6 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -568,26 +565,6 @@ nav a {
   opacity: 0;
 }
 
-/* SLIDE RESPONSIVO (MOBILE)     */
-
-@media (max-width: 950px) {
-  .container_card {
-    display: flex; /* muda de grid → slide horizontal */
-    overflow-x: auto; /* possibilita arrastar */
-    overflow-y: hidden;
-    gap: 20px; /* espaço entre cards */
-    padding: 20px;
-    scroll-snap-type: x mandatory; /* snap suave */
-  }
-
-  .container_card::-webkit-scrollbar {
-    display: none; /* remove barra de rolagem */
-  }
-
-  .card {
-    scroll-snap-align: center;
-  }
-}
 /* CONTAINER MARCAS */
 
 .container_marcas {
