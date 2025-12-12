@@ -14,9 +14,18 @@
         <img src="./img/logo-header.png" alt="Logo do site" />
       </div>
 
+      <div class="menu-icon" id="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <nav id="menu">
         <a href="#header" class="nav-link">Home</a>
         <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#produtos" class="nav-link">Produtos</a>
         <a href="#videos" class="nav-link">Veja mais</a>
         <a href="#contato" class="nav-link">Contato</a>
         <a href="/Catalogo/catalogo.html" class="nav-link">Catálogo</a>
@@ -30,20 +39,21 @@
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
         <!-- Cada Slide do carrossel-->
-        <div class="swiper-slide">
+        <div class="swiper-slide" data-text="soluções completas em EPIs">
           <img src="./img/slide-1.JPG" alt="imagem 1" />
+          <div class="slide-text">Soluções completas em EPIs.</div>
         </div>
-
-        <div class="swiper-slide">
-          <img src="./img/slide-2.jpg" alt="imagem 2" />
+        <div class="swiper-slide" data-text="Equipamentos certificados para sua empresa">
+          <img src="./img/slide-2.JPG" alt="imagem 1" />
+          <div class="slide-text">Equipamentos certificados para sua empresa.</div>
         </div>
-
-        <div class="swiper-slide">
-          <img src="./img/slide-3.jpg" alt="imagem 3" />
+        <div class="swiper-slide" data-text="Proteção e qualidade desde 1993">
+          <img src="./img/slide-3.JPG" alt="imagem 1" />
+          <div class="slide-text">Proteção e qualidade desde 1993.</div>
         </div>
-
-        <div class="swiper-slide">
-          <img src="./img/slide-4.jpg" alt="imagem 4" />
+        <div class="swiper-slide" data-text="EPIs para todos os segmentos">
+          <img src="./img/slide-4.JPG" alt="imagem 1" />
+          <div class="slide-text">EPIs para todos os segmentos.</div>
         </div>
 
         <!--Bolinhas de paginação-->
@@ -68,7 +78,7 @@
     </div>
 
     <!---CONTAINER DOS PRODUTOS-->
-    <div class="category-section">
+    <div class="category-section" id="produtos">
       <h1>Confira nossos produtos e novidades</h1>
       <div class="swiper categorySwiper">
         <div class="swiper-wrapper">

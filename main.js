@@ -607,3 +607,12 @@ links.forEach((link) => {
 menu.addEventListener('mouseleave', () => {
   underline.style.width = '0px';
 });
+
+//MENU HAMBURGUER DO HEADER
+const menuBtn = document.getElementById('menu-btn');
+const menuIcon = document.getElementById('menu');
+
+menuBtn.addEventListener('click', () => {
+  menu.classList.toggle('open'); // abre/fecha o menu
+  menuBtn.classList.toggle('open'); // anima o ícone
+});
