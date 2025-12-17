@@ -3,10 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Protécnica</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
+
   <body>
     <!-- Cabeçalho -->
     <header>
@@ -38,33 +39,45 @@
     <!-- Carrossel de imagens  -->
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- Cada Slide do carrossel-->
-        <div class="swiper-slide" data-text="soluções completas em EPIs">
-          <img src="./img/slide-1.JPG" alt="imagem 1" />
+        <div class="swiper-slide">
+          <img src="./img/slide-1.JPG" />
           <div class="slide-text">Soluções completas em EPIs.</div>
         </div>
-        <div class="swiper-slide" data-text="Equipamentos certificados para sua empresa">
-          <img src="./img/slide-2.JPG" alt="imagem 1" />
+
+        <div class="swiper-slide">
+          <img src="./img/slide-2.JPG" />
           <div class="slide-text">Equipamentos certificados para sua empresa.</div>
         </div>
-        <div class="swiper-slide" data-text="Proteção e qualidade desde 1993">
-          <img src="./img/slide-3.JPG" alt="imagem 1" />
+
+        <div class="swiper-slide">
+          <img src="./img/slide-3.JPG" />
           <div class="slide-text">Proteção e qualidade desde 1993.</div>
         </div>
-        <div class="swiper-slide" data-text="EPIs para todos os segmentos">
-          <img src="./img/slide-4.JPG" alt="imagem 1" />
+
+        <div class="swiper-slide">
+          <img src="./img/slide-4.JPG" />
           <div class="slide-text">EPIs para todos os segmentos.</div>
         </div>
-
-        <!--Bolinhas de paginação-->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-pagination-bullet"></div>
       </div>
-    </div>
 
+      <div class="swiper-pagination"></div>
+    </div>
     <!---CONTAINER ICONES DO VALOR DA EMPRESA-->
     <div class="container_valor">
-      <div class="card.valor">
+      <div class="card_valor">
+        <img src="" alt="" />
+        <span>+30 anos</span>
+      </div>
+      <div class="card_valor">
+        <span>Epis certificados</span>
+        <img src="" alt="" />
+      </div>
+      <div class="card_valor">
+        <span>Entrega rápida</span>
+        <img src="" alt="" />
+      </div>
+      <div class="card_valor">
+        <span>Marcas líderes</span>
         <img src="" alt="" />
       </div>
     </div>
@@ -77,10 +90,11 @@
       <div class="about" style="background-image: url(./img/section4.png)"></div>
 
       <div class="about_text">
-        <h3>Equipamentos que protegem vidas</h3>
-        <h2></h2>
+        <h2 class="text_one">Sua segurança em primeiro lugar</h2>
+        <h2 class="text_two">Equipamentos que protegem vidas</h2>
       </div>
     </section>
+
     <!---CONTAINER DOS PRODUTOS-->
     <div class="category-section" id="produtos">
       <h1>Confira nossos produtos e novidades</h1>
@@ -235,7 +249,7 @@
       <!---RESPIRADOR-->
       <div class="card">
         <div class="front">
-          <img src="./img/mask.png" alt="Respirador" />
+          <img src="./img/mask.gif" alt="Respirador" />
         </div>
         <div class="back">
           <h4 class="heading">Respirador</h4>
@@ -249,7 +263,7 @@
       <!---ABAFADOR-->
       <div class="card">
         <div class="front">
-          <img src="./img/earmuffs.png" alt="" />
+          <img src="./img/phones.gif" alt="" />
         </div>
         <div class="back">
           <h4 class="heading">Abafador</h4>
@@ -263,7 +277,7 @@
       <!---CAPACETE-->
       <div class="card">
         <div class="front">
-          <img src="./img/helmet.png" alt="" />
+          <img src="./img/helmet.gif" alt="" />
         </div>
         <div class="back">
           <h4 class="heading">Capacete</h4>
@@ -291,7 +305,7 @@
       <!---COLETE-->
       <div class="card">
         <div class="front">
-          <img src="./img/vest.png" alt="" />
+          <img src="./img/vest.gif" alt="" />
         </div>
         <div class="back">
           <h4 class="heading">Colete</h4>
@@ -305,7 +319,7 @@
       <!---BOTINA-->
       <div class="card">
         <div class="front">
-          <img src="./img/boots.png" alt="" />
+          <img src="./img/boots.gif" alt="" />
         </div>
         <div class="back">
           <h4 class="heading">Botina</h4>
@@ -319,7 +333,7 @@
       <!--CINTO-->
       <div class="card">
         <div class="front">
-          <img src="./img/harnesses.png" alt="" />
+          <img src="./img/carabiner.gif" alt="" />
         </div>
         <div class="back">
           <h4 class="heading">Cinto</h4>
@@ -443,8 +457,6 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
     </div>
-    <!--Importa o Script do Swipper (Carrossel)-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <!--Rodapé do site-->
     <footer class="rodape">Todos os direitos reservados a Protécnica Epi´s ®</footer>
@@ -452,8 +464,6 @@
     <!--Importa o Script do Swipper (Carrossel)-->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="main.js">
-      JavaScript
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

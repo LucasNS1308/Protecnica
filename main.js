@@ -19,7 +19,7 @@ const categorySwiper = new Swiper('.categorySwiper', {
   slidesPerView: 3,
   spaceBetween: 20,
   loop: true,
-  speed: 0,
+  speed: 90000,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,

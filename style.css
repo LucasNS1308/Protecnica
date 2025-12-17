@@ -85,46 +85,18 @@ nav a {
   height: 4px;
   border-radius: 6px;
 }
+/* CONTAINER VALOR DA EMPRESA */
+.container_valor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  width: 100%;
+  height: 30vh;
+}
 
-/* 🔥 RESPONSIVO — TELA PEQUENA */
-@media (max-width: 768px) {
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background: #1b1e47;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-    z-index: 100;
-  }
-
-  nav.open {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: flex;
-  }
-
-  /*  ANIMAÇÃO DO ÍCONE — ABERTO PARA X */
-  .menu-icon.open span:nth-child(1) {
-    transform: translateY(10px) rotate(45deg);
-  }
-
-  .menu-icon.open span:nth-child(2) {
-    opacity: 0; /* desaparece */
-  }
-
-  .menu-icon.open span:nth-child(3) {
-    transform: translateY(-10px) rotate(-45deg);
-  }
-
-  .menu-icon.open span:nth-child(4) {
-    opacity: 0;
-  }
+.card_valor span {
+  font-size: 2rem;
 }
 /* Border-box para todos elementos before e after*/
 *,
@@ -159,12 +131,10 @@ nav a {
 
 .slide-text {
   position: absolute;
+  left: 10%;
   color: #fff;
-  top: 300px;
-  left: 5%;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
-  backdrop-filter: blur(3px);
   opacity: 0;
   transform: translateX(20px);
   transition: 0.6s ease;
@@ -175,21 +145,17 @@ nav a {
   transform: translateY(0);
 }
 
-.swiper-pagination-bullet {
-  background: #f7d304;
-  opacity: 0.8;
-}
-
-.swiper-pagination-bullet-active {
-  background: #1b1e47;
-  opacity: 2;
+.mySwiper .swiper-pagination-bullet {
+  background: #fd8c58;
+  width: 13px;
+  height: 13px;
 }
 
 /* LAYOUT SOBRE A EMPRESA */
 .sobre {
   position: relative;
   width: 100%;
-  min-height: 90vh;
+  height: 100vh;
   overflow: hidden;
 }
 
@@ -198,14 +164,50 @@ nav a {
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0;
+  background-repeat: no-repeat;
   transition: opacity 1s ease;
   transform: scale(1.1);
-  animation: zoom 20s linear infinite;
+  opacity: 0;
+  margin-top: 200px;
+  filter: brightness(0.4);
 }
-/* CONTAINER DAS SEÇÕES DOS PRODUTOS */
+
+@keyframes zoomAbout {
+  0% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
+}
+
+.about.active {
+  opacity: 1;
+}
+
+.about_text {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: initial;
+  flex-direction: column;
+  padding-left: 10%;
+  z-index: 2;
+  height: 100%;
+}
+
+.text_one {
+  font-size: 3rem;
+  color: #fd8c58;
+}
+
+.text_two {
+  font-size: 2rem;
+  color: #fff;
+}
+/* CONTAINER DO CARROSSEL */
 .category-section {
-  width: 70%;
+  width: 80%;
   margin: 10% auto;
 }
 
@@ -238,7 +240,7 @@ nav a {
 }
 
 /* Área que segura a imagem */
-.category-img-wrapper {
+.category-img-wrapper img {
   width: 100%;
   display: flex;
   align-items: center;
@@ -246,6 +248,7 @@ nav a {
   overflow: hidden;
   border-radius: 2px;
   height: 40vh;
+  filter: brightness(1);
 }
 
 /* IMAGEM */
@@ -259,7 +262,6 @@ nav a {
 /* ZOOM SUAVE DENTRO DA IMAGEM */
 .category-img-wrapper:hover .category-img {
   transform: scale(1.1);
-  filter: brightness(0.4);
 }
 
 /* NOME DA CATEGORIA DE PRODUTOS */
@@ -729,6 +731,46 @@ footer {
 
 /*MEDIA QUERIES*/
 /*RESPONSIVIDADE*/
+/* RESPONSIVO — TELA PEQUENA */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #1b1e47;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
+    z-index: 100;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  /*  ANIMAÇÃO DO ÍCONE — ABERTO PARA X */
+  .menu-icon.open span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .menu-icon.open span:nth-child(2) {
+    opacity: 0; /* desaparece */
+  }
+
+  .menu-icon.open span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+
+  .menu-icon.open span:nth-child(4) {
+    opacity: 0;
+  }
+}
 
 /* 1200px - Notebooks */
 @media (max-width: 1200px) {
