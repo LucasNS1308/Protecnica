@@ -562,10 +562,14 @@ closeBtn.addEventListener('click', () => {
 //MENU HAMBURGUER DO HEADER
 const menuToggle = document.getElementById('mobile-menu');
 const menuNav = document.getElementById('menu');
+const backdrop = document.createElement('div');
+backdrop.id = 'menu-backdrop';
+document.body.appendChild(backdrop);
 
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('is-active');
   menuNav.classList.toggle('active');
+  backdrop.classList.toggle('active');
 });
 
 // Fechar menu ao clicar em um link
@@ -574,4 +578,11 @@ document.querySelectorAll('#menu a').forEach((link) => {
     menuToggle.classList.remove('is-active');
     menuNav.classList.remove('active');
   });
+});
+
+// Fechar ao clicar no fundo escuro
+backdrop.addEventListener('click', () => {
+  menuToggle.classList.remove('is-active');
+  menuNav.classList.remove('active');
+  backdrop.classList.remove('active');
 });
