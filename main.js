@@ -559,60 +559,19 @@ closeBtn.addEventListener('click', () => {
   productsSection.classList.remove('visible');
 });
 
-// EFEITO NO HEADER
-const menu = document.getElementById('menu');
-const links = document.querySelectorAll('.nav-link');
-const underline = document.querySelector('.menu-underline');
-
-let currentRect = null;
-
-links.forEach((link) => {
-  link.addEventListener('mouseenter', () => {
-    const rect = link.getBoundingClientRect();
-    const menuRect = menu.getBoundingClientRect();
-
-    const left = rect.left - menuRect.left;
-    const width = rect.width;
-
-    if (currentRect) {
-      const currentLeft = currentRect.left;
-      const currentWidth = currentRect.width;
-
-      // se o novo item está À DIREITA → expandir até cobrir tudo até lá
-      if (left > currentLeft) {
-        underline.style.left = currentLeft + 'px';
-        underline.style.width = left + width - currentLeft + 'px';
-      } else {
-        // se o novo item está À ESQUERDA → expandir até a esquerda
-        underline.style.left = left + 'px';
-        underline.style.width = currentLeft + currentWidth - left + 'px';
-      }
-
-      // depois de um mini delay, encolher para encaixar exatamente
-      setTimeout(() => {
-        underline.style.left = left + 'px';
-        underline.style.width = width + 'px';
-      }, 150);
-    } else {
-      // primeira vez → só posiciona
-      underline.style.left = left + 'px';
-      underline.style.width = width + 'px';
-    }
-
-    currentRect = { left, width };
-  });
-});
-
-// opcional: tira underline ao sair do menu
-menu.addEventListener('mouseleave', () => {
-  underline.style.width = '0px';
-});
-
 //MENU HAMBURGUER DO HEADER
-const menuBtn = document.getElementById('menu-btn');
-const menuIcon = document.getElementById('menu');
+const menuToggle = document.getElementById('mobile-menu');
+const menuNav = document.getElementById('menu');
 
-menuBtn.addEventListener('click', () => {
-  menu.classList.toggle('open'); // abre/fecha o menu
-  menuBtn.classList.toggle('open'); // anima o ícone
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('is-active');
+  menuNav.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em um link
+document.querySelectorAll('#menu a').forEach((link) => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('is-active');
+    menuNav.classList.remove('active');
+  });
 });
