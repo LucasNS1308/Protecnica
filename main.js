@@ -1,5 +1,5 @@
 // CAROSSEL COM IMAGENS (HEADER)
-const swiper = new Swiper('.mySwiper', {
+const swiper1 = new Swiper('.mySwiper', {
   loop: true,
   autoplay: {
     delay: 7000,
@@ -15,20 +15,17 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 // CARROSSEL PRODUTOS (SEÇÃO PRODUTOS)
-const categorySwiper = new Swiper('.categorySwiper', {
-  slidesPerView: 3,
-  spaceBetween: 20,
+const swiper2 = new Swiper('.categorySwiper', {
+  spaceBetween: 10,
   loop: true,
-  speed: 90000,
-  autoplay: {
-    delay: 0,
-    disableOnInteraction: false,
-  },
-  freeMode: false,
-  freeModeMomentum: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    320: { slidesPerView: 2, spaceBetween: 10 },
+    768: { slidesPerView: 3, spaceBetween: 20 },
+    1024: { slidesPerView: 3, spaceBetween: 30 },
   },
 });
 
@@ -585,4 +582,19 @@ backdrop.addEventListener('click', () => {
   menuToggle.classList.remove('is-active');
   menuNav.classList.remove('active');
   backdrop.classList.remove('active');
+});
+
+//CARROSSEL DAS MARCAS
+const swiper3 = new Swiper('.swiperMark', {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 0,
+  },
+  breakpoints: {
+    320: { slidesPerView: 2, spaceBetween: 10 },
+    768: { slidesPerView: 3, spaceBetween: 20 },
+    1024: { slidesPerView: 5, spaceBetween: 30 },
+  },
 });
