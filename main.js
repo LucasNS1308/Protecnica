@@ -474,7 +474,7 @@ const categories = {
     },
   ],
 
-  armazem: [
+  logistica: [
     {
       name: '',
       desc: 'Descrição do produto...',
@@ -590,7 +590,7 @@ const swiper3 = new Swiper('.swiperMark', {
   spaceBetween: 30,
   loop: true,
   autoplay: {
-    delay: 0,
+    delay: 2000,
   },
   breakpoints: {
     320: { slidesPerView: 2, spaceBetween: 10 },
