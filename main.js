@@ -485,12 +485,12 @@ const categories = {
   ],
 };
 
-// Elementos DOM
+//  ELEMENTOS DOM
 const productsSection = document.getElementById('products-section');
 const productsContainer = document.getElementById('products-container');
 const closeBtn = document.getElementById('close-products');
 
-// FUNÇÃO: mostra skeleton loading
+// FUNÇÃO: MOSTRAR SKELETON ANTES DOS CARDS
 
 function showSkeleton() {
   const skeletons = Array(6)
@@ -509,7 +509,7 @@ function showSkeleton() {
   productsContainer.innerHTML = skeletons;
 }
 
-// FUNÇÃO: carregar produtos
+// FUNÇÃO: CARREGAR PRODUTOS
 
 function loadProducts(category) {
   productsSection.classList.add('visible');
@@ -541,7 +541,7 @@ function loadProducts(category) {
   }, 600);
 }
 
-// EVENTO: clique nas categorias
+// EVENTO: CLIQUE NAS CATEGORIAS
 
 document.querySelectorAll('.category-slide').forEach((slide) => {
   slide.addEventListener('click', () => {
