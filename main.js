@@ -585,14 +585,18 @@ backdrop.addEventListener('click', () => {
 });
 
 //CARROSSEL DAS MARCAS
-const swiper = new Swiper('.swiperMark', {
-  slidesPerView: 5,
+var swiper = new Swiper('.swiperMark', {
+  slidesPerView: 3,
   spaceBetween: 30,
   loop: true,
-  speed: 600,
+  freeMode: true,
+  speed: 4000,
   autoplay: {
+    delay: 1,
     disableOnInteraction: false,
+    pauseOnMouseEnter: false,
   },
+  loopAdditionalSlides: 6,
   breakpoints: {
     320: { slidesPerView: 2, spaceBetween: 10 },
     768: { slidesPerView: 3, spaceBetween: 20 },

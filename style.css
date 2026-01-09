@@ -263,7 +263,8 @@ header {
 }
 
 .externo-wrapper {
-  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -277,6 +278,25 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.externo-wrapper .swiper-button-prev,
+.externo-wrapper .swiper-button-next {
+  position: absolute;
+  color: #1b1e47;
+  background-color: #f7d304;
+  width: 40px;
+  height: 60px;
+  top: 50%;
+  border-radius: 4px;
+}
+
+.swiper-button-prev {
+  left: 0px;
+}
+
+.swiper-button-next {
+  right: 0px;
 }
 
 /* SEÇÃO DE PRODUTOS*/
@@ -539,7 +559,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   min-height: 30vh;
   overflow: hidden;
 }
@@ -548,6 +568,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition-timing-function: linear;
 }
 
 .mark-category img {
