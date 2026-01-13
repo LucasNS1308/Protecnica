@@ -1,4 +1,4 @@
-// CAROSSEL COM IMAGENS (HEADER)
+// carousel COM IMAGENS (HEADER)
 const swiper1 = new Swiper('.mySwiper', {
   loop: true,
   autoplay: {
@@ -23,7 +23,7 @@ const swiper2 = new Swiper('.categorySwiper', {
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    320: { slidesPerView: 2, spaceBetween: 10 },
+    320: { slidesPerView: 1, spaceBetween: 10 },
     768: { slidesPerView: 3, spaceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 30 },
   },
