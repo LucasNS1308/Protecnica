@@ -9,25 +9,48 @@ const swiper1 = new Swiper('.mySwiper', {
     el: '.swiper-pagination',
     clickable: true,
   },
-
   effect: 'fade',
   slidesPerView: 1,
 });
 
 // CARROSSEL PRODUTOS (SEÇÃO PRODUTOS)
 const swiper2 = new Swiper('.categorySwiper', {
-  spaceBetween: 10,
+  slidesPerView: 3,
+  spaceBetween: 30,
   loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+  freeMode: true,
+  speed: 8000,
+  autoplay: {
+    delay: 1,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: false,
   },
+
+  loopAdditionalSlides: 6,
   breakpoints: {
     320: { slidesPerView: 1, spaceBetween: 10 },
     768: { slidesPerView: 3, spaceBetween: 20 },
     1024: { slidesPerView: 3, spaceBetween: 30 },
   },
 });
+
+//CATEGORIA SOBRE
+const slides = document.querySelectorAll('.about');
+let currentSlide = 0;
+
+function nextSlide() {
+  // Remove a classe active da imagem atual
+  slides[currentSlide].classList.remove('active');
+
+  // Avança para a próxima imagem (volta para a 0 se chegar no fim)
+  currentSlide = (currentSlide + 1) % slides.length;
+
+  // Adiciona a classe active na nova imagem
+  slides[currentSlide].classList.add('active');
+}
+
+// Executa a troca a cada 5 segundos (o mesmo tempo da animação do CSS)
+setInterval(nextSlide, 6000);
 
 // CATEGORIAS DOS PRODUTOS
 const categories = {

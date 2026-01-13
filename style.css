@@ -107,13 +107,13 @@ header {
 .card_valor {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   width: 20%;
   align-items: center;
   justify-content: center;
   gap: 20px;
   border-left: 1px solid #000000;
   border-right: 1px solid #000000;
+  text-align: center;
 }
 
 .card_valor img {
@@ -124,6 +124,7 @@ header {
   font-size: 2rem;
 }
 
+/* MENU BACKDROP HAMBURGUER */
 #menu-backdrop {
   display: none;
   position: fixed;
@@ -132,7 +133,7 @@ header {
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 9998;
+  z-index: 1000;
 }
 
 #menu-backdrop.active {
@@ -186,6 +187,11 @@ header {
   height: 10px;
 }
 
+@media (max-width: 380px) {
+  .mySwiper {
+    max-width: 100%;
+  }
+}
 /* LAYOUT SOBRE A EMPRESA */
 .sobre {
   position: relative;
@@ -196,28 +202,32 @@ header {
 
 .about {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: opacity 1s ease;
-  transform: scale(1.1);
   opacity: 0;
-  margin-top: 200px;
-  filter: brightness(0.4);
-}
-
-@keyframes zoomAbout {
-  0% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1.25);
-  }
+  z-index: 1;
+  filter: brightness(0.3);
 }
 
 .about.active {
   opacity: 1;
+  z-index: 2;
+  animation: zoomEfeito 6s forwards;
+}
+
+@keyframes zoomEfeito {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 .about_text {
@@ -227,7 +237,7 @@ header {
   align-items: initial;
   flex-direction: column;
   padding-left: 10%;
-  z-index: 2;
+  z-index: 10;
   height: 100%;
 }
 
@@ -238,7 +248,7 @@ header {
 
 .text_two {
   font-size: 2rem;
-  color: #aaa;
+  color: #f5f5f5;
 }
 
 /* CONTAINER CARROSEL DAS CATEGORIAS */
@@ -250,7 +260,10 @@ header {
 .category-section .text_products {
   text-align: center;
   color: #1b1e47;
+  margin-bottom: 50px;
+  font-size: 2rem;
 }
+
 .categorySwiper {
   width: 90%;
   max-width: 1200px;
@@ -265,6 +278,11 @@ header {
   align-items: center;
   flex-direction: column;
 }
+
+/*.category-slide span {
+  border-bottom: 1px solid #335485;
+  width: 100%;
+}*/
 
 .externo-wrapper {
   max-width: 1200px;
@@ -282,25 +300,6 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.externo-wrapper .swiper-button-prev,
-.externo-wrapper .swiper-button-next {
-  position: absolute;
-  color: #1b1e47;
-  background-color: #f7d304;
-  width: 40px;
-  height: 60px;
-  top: 50%;
-  border-radius: 4px;
-}
-
-.swiper-button-prev {
-  left: 0px;
-}
-
-.swiper-button-next {
-  right: 0px;
 }
 
 /* SEÇÃO DE PRODUTOS*/
@@ -329,6 +328,8 @@ header {
   padding: 10px;
   justify-items: center;
   background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
 
 /* CARD DOS PRODUTOS*/
@@ -416,7 +417,7 @@ header {
 .close-products-btn {
   position: absolute;
   top: 10px;
-  right: 15%;
+  right: 19%;
   background: #fff;
   border: 2px solid #aaa;
   width: 32px;
@@ -480,10 +481,10 @@ header {
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   width: 95%;
-  max-width: 1400px;
+  max-width: 1200px;
   min-height: 50%;
   border-radius: 6px;
-  gap: 40px;
+  gap: 30px;
   margin: 50px auto;
 }
 
@@ -563,7 +564,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 80%;
   min-height: 30vh;
   overflow: hidden;
 }
@@ -732,67 +733,9 @@ footer {
   font-family: 'poppins', sans-serif;
 }
 
-/*MEDIA QUERIES*/
-/* Responsividade (Celular e Tablet) */
+/*------------------------------------------------------*/
+/*MEDIA QUERIES  1200PX
 
-/* RESPONSIVIDADE MENU BAR */
-@media (max-width: 768px) {
-  header {
-    justify-content: space-between;
-    padding: 15px 25px;
-  }
-
-  .menu-toggle {
-    display: flex;
-    z-index: 10000;
-  }
-
-  #menu {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    z-index: 9999;
-    width: 70%;
-    height: 100vh;
-    background-color: #1b1e47;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    transition: 0.4s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
-  }
-
-  #menu.active {
-    right: 0;
-  }
-
-  /* Faz o texto (span) aparecer sempre no mobile */
-  #menu a span {
-    position: static;
-    opacity: 1;
-    transform: none;
-    margin-top: 8px;
-  }
-
-  #menu a {
-    flex-direction: column;
-  }
-
-  /* Animação do X no hambúrguer quando aberto */
-  .menu-toggle.is-active .bar:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.is-active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  .menu-toggle.is-active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-}
-
-/* 1200px - Notebooks */
 @media (max-width: 1200px) {
   .container {
     height: 60vh;
@@ -810,9 +753,9 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
-}
+}*/
 
-/* 992px - Tablet horizontal */
+/* MEDIA QUERIES 992px
 @media (max-width: 992px) {
   header {
     flex-direction: column;
@@ -858,6 +801,86 @@ footer {
 
   .container_final_sec {
     grid-template-columns: repeat(2, 1fr);
+  }
+}*/
+
+/* MEDIA QUERIE 768px */
+@media (max-width: 768px) {
+  /* HEADER E MENU DE NAVEGAÇÃO*/
+  header {
+    justify-content: space-between;
+    padding: 15px 25px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 10000;
+  }
+
+  #menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 9999;
+    width: 70%;
+    height: 100vh;
+    background-color: #1b1e47;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transition: 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+  }
+
+  #menu.active {
+    right: 0;
+  }
+
+  /* FAZ O TEXTO DO SPAN SEMPRE APARECER NO MOBILE */
+  #menu a span {
+    position: static;
+    opacity: 1;
+    transform: none;
+    margin-top: 8px;
+  }
+
+  #menu a {
+    flex-direction: column;
+  }
+
+  /* ANIMAÇÃO DO X QUANDO MENU HAMBURGUER ABRIR*/
+  .menu-toggle.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .menu-toggle.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .menu-toggle.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* MEDIA QUERIES CONTAINER VALOR DA EMPRESA */
+  .container_valor {
+    height: auto;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
+
+  .card_valor {
+    width: 45%;
+    border: none;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+
+  .text_one {
+    font-size: 2rem;
+  }
+
+  .text_two {
+    font-size: 1rem;
   }
 }
 
@@ -933,10 +956,17 @@ footer {
     width: 50%;
     margin: 0 auto;
   }
+
+  .container_card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 
-/* 576px - Celulares */
-@media (max-width: 576px) {
+/* 480px - Celulares */
+@media (max-width: 480px) {
   nav {
     flex-direction: column;
     gap: 10px;
@@ -951,7 +981,8 @@ footer {
     min-height: 35vh;
   }
 
-  .swiper-slide img {
+  .swiper-slide .home-slide img {
+    max-height: 100%;
     height: 35vh;
   }
 
@@ -1006,6 +1037,23 @@ footer {
   .logo_final {
     width: 60%;
   }
+
+  /* TEXTO H1 DO CONTAINER SOBRE*/
+  .text_one {
+    font-size: 1rem;
+  }
+
+  .text_two {
+    font-size: 0.5rem;
+  }
+
+  /*CONTAINER DOS CARDS (IMPORTANCIA DOS EPIS)*/
+  .container_card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 
 /* 380px - Celulares pequenos */
@@ -1027,7 +1075,7 @@ footer {
     height: 7%;
   }
 
-  .category-section h1 {
+  .category-section h2 {
     font-size: 1.2rem;
   }
 
@@ -1041,5 +1089,13 @@ footer {
 
   .container_final_sec {
     gap: 20px;
+  }
+
+  .container_card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container_valor {
   }
 }
