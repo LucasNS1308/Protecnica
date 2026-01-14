@@ -253,12 +253,12 @@ header {
 }
 
 .text_one {
-  font-size: 3rem;
+  font-size: 4.8rem;
   color: #f7d304;
 }
 
 .text_two {
-  font-size: 2rem;
+  font-size: 3.8rem;
   color: #f5f5f5;
 }
 
@@ -803,223 +803,204 @@ footer {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* MEDIA QUERIES CONTAINER VALOR DA EMPRESA */
-  .container_valor {
-    height: auto;
-    padding: 20px 0;
-    margin-top: 50px;
+  /* 768px - Tablet vertical */
+  @media (max-width: 768px) {
+    nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    header {
+      height: auto;
+      padding-bottom: 30px;
+    }
+
+    .swiper {
+      min-height: 40vh;
+    }
+
+    .swiper-slide img {
+      height: 40vh;
+    }
+
+    .slide-text {
+      font-size: 1.2rem;
+    }
+
+    /* CONTAINER VALOR DA EMPRESA */
+    .container_valor {
+      height: auto;
+      padding: 20px 0;
+      margin-top: 50px;
+    }
+
+    .card_valor {
+      width: 45%;
+      border: none;
+      margin-bottom: 30px;
+      padding: 10px;
+    }
+
+    .text_one {
+      font-size: 3.2rem;
+    }
+
+    .text_two {
+      font-size: 2rem;
+    }
+
+    .container {
+      height: 45vh;
+    }
+
+    .text h2 {
+      font-size: 1.2rem;
+    }
+
+    .text span {
+      width: 90%;
+      font-size: 0.9rem;
+    }
+
+    .text_sobre {
+      width: 30%;
+    }
+
+    .products-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .product-card {
+      padding: 15px;
+    }
+
+    .container_final_sec {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+
+    .container_address,
+    .container_contato,
+    .container_redes {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo_final {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .container_card {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      width: 90%;
+      margin: 20px auto;
+    }
   }
 
-  .card_valor {
-    width: 45%;
-    border: none;
-    margin-bottom: 30px;
-    padding: 10px;
-  }
+  /* 480px - Celulares */
+  @media (max-width: 480px) {
+    nav {
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px;
+    }
 
-  .text_one {
-    font-size: 2rem;
-  }
+    .logo img {
+      height: 60px;
+    }
 
-  .text_two {
-    font-size: 1rem;
-  }
-}
+    .slide-text {
+      font-size: 3rem;
+    }
 
-/* 768px - Tablet vertical */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
+    .swiper {
+      min-height: 35vh;
+    }
 
-  header {
-    height: auto;
-    padding-bottom: 30px;
-  }
+    .swiper-slide .home-slide img {
+      max-height: 100%;
+      height: 35vh;
+    }
 
-  .swiper {
-    min-height: 40vh;
-  }
+    .container {
+      height: 40vh;
+    }
 
-  .swiper-slide img {
-    height: 40vh;
-  }
+    h1,
+    h2 {
+      font-size: 1.5rem;
+    }
 
-  .slide-text {
-    font-size: 1.2rem;
-  }
+    .text span {
+      font-size: 0.8rem;
+    }
 
-  /* CONTAINER VALOR DA EMPRESA */
-  .container_valor {
-    height: auto;
-    padding: 20px 0;
-    margin-top: 50px;
-  }
+    .text_sobre {
+      width: 40%;
+      height: 8%;
+      font-size: 0.9rem;
+    }
 
-  .card_valor {
-    width: 45%;
-    border: none;
-    margin-bottom: 30px;
-    padding: 10px;
-  }
+    .category-section h1 {
+      font-size: 1.4rem;
+      width: 80%;
+    }
 
-  .text_one {
-    font-size: 2rem;
-  }
+    #close-products {
+      right: 10px;
+      transform: translateX(0);
+    }
 
-  .text_two {
-    font-size: 1rem;
-  }
+    .products-grid {
+      grid-template-columns: 1fr;
+    }
 
-  .container {
-    height: 45vh;
-  }
+    .product-images {
+      height: 150px;
+    }
 
-  .text h2 {
-    font-size: 1.2rem;
-  }
+    .text_vid {
+      font-size: 1.5rem;
+    }
 
-  .text span {
-    width: 90%;
-    font-size: 0.9rem;
-  }
+    .parceiros {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
 
-  .text_sobre {
-    width: 30%;
-  }
+    .container_final_sec {
+      width: 90%;
+    }
 
-  .categorySwiper .swiper-button-next,
-  .categorySwiper .swiper-button-prev {
-    width: 30px;
-    height: 40px;
-  }
+    .container_contato .contato_icones {
+      text-align: center;
+    }
 
-  .products-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  }
+    .logo_final {
+      width: 60%;
+    }
 
-  .product-card {
-    padding: 15px;
-  }
+    /* TEXTO H1 DO CONTAINER SOBRE*/
+    .text_one {
+      font-size: 1rem;
+    }
 
-  .container_final_sec {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    text-align: center;
-  }
+    .text_two {
+      font-size: 0.5rem;
+    }
 
-  .container_address,
-  .container_contato,
-  .container_redes {
-    align-items: center;
-  }
-
-  .logo_final {
-    width: 50%;
-    margin: 0 auto;
-  }
-
-  .container_card {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    width: 90%;
-    margin: 20px auto;
-  }
-}
-
-/* 480px - Celulares */
-@media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .logo img {
-    height: 60px;
-  }
-
-  .swiper {
-    min-height: 35vh;
-  }
-
-  .swiper-slide .home-slide img {
-    max-height: 100%;
-    height: 35vh;
-  }
-
-  .container {
-    height: 40vh;
-  }
-
-  .text h2 {
-    font-size: 1rem;
-  }
-
-  .text span {
-    font-size: 0.8rem;
-  }
-
-  .text_sobre {
-    width: 40%;
-    height: 8%;
-    font-size: 0.9rem;
-  }
-
-  .category-section h1 {
-    font-size: 1.4rem;
-    width: 80%;
-  }
-
-  #close-products {
-    right: 10px;
-    transform: translateX(0);
-  }
-
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .product-images {
-    height: 150px;
-  }
-
-  .text_vid {
-    font-size: 1.5rem;
-  }
-
-  .parceiros {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-
-  .container_final_sec {
-    width: 90%;
-  }
-
-  .container_contato .contato_icones {
-    text-align: center;
-  }
-
-  .logo_final {
-    width: 60%;
-  }
-
-  /* TEXTO H1 DO CONTAINER SOBRE*/
-  .text_one {
-    font-size: 1rem;
-  }
-
-  .text_two {
-    font-size: 0.5rem;
-  }
-
-  /*CONTAINER DOS CARDS (IMPORTANCIA DOS EPIS)*/
-  .container_card {
-    grid-template-columns: 1fr;
-    min-height: auto;
-    width: 90%;
-    margin: 20px auto;
+    /*CONTAINER DOS CARDS (IMPORTANCIA DOS EPIS)*/
+    .container_card {
+      grid-template-columns: 1fr;
+      min-height: auto;
+      width: 90%;
+      margin: 20px auto;
+    }
   }
 }
