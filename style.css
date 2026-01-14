@@ -120,38 +120,7 @@ header {
   display: block;
 }
 
-/* CONTAINER VALOR DA EMPRESA */
-.container_valor {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  height: 40vh;
-}
-
-.card_valor {
-  display: flex;
-  flex-direction: column;
-  width: 20%;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  border-left: 1px solid #000000;
-  border-right: 1px solid #000000;
-  text-align: center;
-}
-
-.card_valor img {
-  width: 42px;
-}
-
-.card_valor span {
-  font-size: 2rem;
-  color: #000000;
-}
-
-/* CAROSSEL DE IMAGENS */
+/* CAROSSEL DE IMAGENS HOME*/
 .mySwiper {
   max-width: 100%;
   min-height: 60vh;
@@ -198,11 +167,37 @@ header {
   height: 10px;
 }
 
-@media (max-width: 380px) {
-  .mySwiper {
-    max-width: 100%;
-  }
+/* CONTAINER VALOR DA EMPRESA */
+.container_valor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 40vh;
 }
+
+.card_valor {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  text-align: center;
+}
+
+.card_valor img {
+  width: 42px;
+}
+
+.card_valor span {
+  font-size: 2rem;
+  color: #000000;
+}
+
 /* LAYOUT SOBRE A EMPRESA */
 .sobre {
   position: relative;
@@ -265,7 +260,7 @@ header {
 /* CONTAINER CARROSEL DAS CATEGORIAS */
 .category-section {
   width: 100%;
-  margin-top: 10%;
+  margin-top: 3%;
 }
 
 .category-section .text_products {
@@ -290,10 +285,9 @@ header {
   flex-direction: column;
 }
 
-/*.category-slide span {
-  border-bottom: 1px solid #335485;
-  width: 100%;
-}*/
+.category-slide span {
+  font-size: 1rem;
+}
 
 .externo-wrapper {
   max-width: 1200px;
@@ -338,7 +332,6 @@ header {
   max-width: 1200px;
   padding: 10px;
   justify-items: center;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
 }
@@ -786,7 +779,6 @@ footer {
     right: 0;
   }
 
-  /* FAZ O TEXTO DO SPAN SEMPRE APARECER NO MOBILE */
   #menu a span {
     position: static;
     opacity: 1;
@@ -809,6 +801,7 @@ footer {
     transform: translateY(-8px) rotate(-45deg);
   }
 
+  /* SLIDE HOME */
   .swiper {
     min-height: 40vh;
   }
@@ -834,6 +827,7 @@ footer {
     margin-bottom: 30px;
     padding: 10px;
   }
+
   /* TEXTO CONTAINER (SOBRE) */
   .text_one {
     font-size: 3.2rem;
@@ -847,19 +841,10 @@ footer {
     height: 45vh;
   }
 
-  .text h2 {
-    font-size: 1.2rem;
-  }
-
-  .text span {
-    width: 90%;
-    font-size: 0.9rem;
-  }
-
   .text_sobre {
     width: 30%;
   }
-
+  /* SEÇÃO SLIDE E PRODUTO */
   .products-grid {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
@@ -979,7 +964,7 @@ footer {
   }
 
   .text_epi h3 {
-    text-align: initial;
+    text-align: center;
   }
 
   /* CONTAINER MARCAS PARCEIROS */
