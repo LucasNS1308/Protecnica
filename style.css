@@ -754,6 +754,12 @@ footer {
     padding: 15px 25px;
   }
 
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
   .menu-toggle {
     display: flex;
     z-index: 10000;
@@ -764,7 +770,7 @@ footer {
     top: 0;
     right: -100%;
     z-index: 9999;
-    width: 70%;
+    width: 40%;
     height: 100vh;
     background-color: #1b1e47;
     flex-direction: column;
@@ -803,204 +809,195 @@ footer {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* 768px - Tablet vertical */
-  @media (max-width: 768px) {
-    nav {
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    header {
-      height: auto;
-      padding-bottom: 30px;
-    }
-
-    .swiper {
-      min-height: 40vh;
-    }
-
-    .swiper-slide img {
-      height: 40vh;
-    }
-
-    .slide-text {
-      font-size: 1.2rem;
-    }
-
-    /* CONTAINER VALOR DA EMPRESA */
-    .container_valor {
-      height: auto;
-      padding: 20px 0;
-      margin-top: 50px;
-    }
-
-    .card_valor {
-      width: 45%;
-      border: none;
-      margin-bottom: 30px;
-      padding: 10px;
-    }
-
-    .text_one {
-      font-size: 3.2rem;
-    }
-
-    .text_two {
-      font-size: 2rem;
-    }
-
-    .container {
-      height: 45vh;
-    }
-
-    .text h2 {
-      font-size: 1.2rem;
-    }
-
-    .text span {
-      width: 90%;
-      font-size: 0.9rem;
-    }
-
-    .text_sobre {
-      width: 30%;
-    }
-
-    .products-grid {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
-
-    .product-card {
-      padding: 15px;
-    }
-
-    .container_final_sec {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      text-align: center;
-    }
-
-    .container_address,
-    .container_contato,
-    .container_redes {
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .logo_final {
-      width: 50%;
-      margin: 0 auto;
-    }
-
-    .container_card {
-      grid-template-columns: 1fr;
-      min-height: auto;
-      width: 90%;
-      margin: 20px auto;
-    }
+  .swiper {
+    min-height: 40vh;
   }
 
-  /* 480px - Celulares */
-  @media (max-width: 480px) {
-    nav {
-      flex-direction: column;
-      gap: 10px;
-      padding: 15px;
-    }
+  .swiper-slide img {
+    height: 40vh;
+  }
 
-    .logo img {
-      height: 60px;
-    }
+  .slide-text {
+    font-size: 1.2rem;
+  }
 
-    .slide-text {
-      font-size: 3rem;
-    }
+  /* CONTAINER VALOR DA EMPRESA */
+  .container_valor {
+    height: auto;
+    padding: 20px 0;
+    margin-top: 50px;
+  }
 
-    .swiper {
-      min-height: 35vh;
-    }
+  .card_valor {
+    width: 45%;
+    border: none;
+    margin-bottom: 30px;
+    padding: 10px;
+  }
+  /* TEXTO CONTAINER (SOBRE) */
+  .text_one {
+    font-size: 3.2rem;
+  }
 
-    .swiper-slide .home-slide img {
-      max-height: 100%;
-      height: 35vh;
-    }
+  .text_two {
+    font-size: 2rem;
+  }
 
-    .container {
-      height: 40vh;
-    }
+  .container {
+    height: 45vh;
+  }
 
-    h1,
-    h2 {
-      font-size: 1.5rem;
-    }
+  .text h2 {
+    font-size: 1.2rem;
+  }
 
-    .text span {
-      font-size: 0.8rem;
-    }
+  .text span {
+    width: 90%;
+    font-size: 0.9rem;
+  }
 
-    .text_sobre {
-      width: 40%;
-      height: 8%;
-      font-size: 0.9rem;
-    }
+  .text_sobre {
+    width: 30%;
+  }
 
-    .category-section h1 {
-      font-size: 1.4rem;
-      width: 80%;
-    }
+  .products-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
 
-    #close-products {
-      right: 10px;
-      transform: translateX(0);
-    }
+  .product-card {
+    padding: 15px;
+  }
 
-    .products-grid {
-      grid-template-columns: 1fr;
-    }
+  .container_final_sec {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
 
-    .product-images {
-      height: 150px;
-    }
+  .container_address,
+  .container_contato,
+  .container_redes {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 
-    .text_vid {
-      font-size: 1.5rem;
-    }
+  .container_contato a {
+    width: 100%;
+    text-align: center;
+  }
 
-    .parceiros {
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    }
+  .container_contato a {
+    display: flex;
+    justify-content: center;
+  }
 
-    .container_final_sec {
-      width: 90%;
-    }
+  .logo_final {
+    width: 50%;
+    margin: 0 auto;
+  }
 
-    .container_contato .contato_icones {
-      text-align: center;
-    }
+  .container_card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    width: 90%;
+    margin: 20px auto;
+  }
+}
 
-    .logo_final {
-      width: 60%;
-    }
+/* 480px - Celulares */
+@media (max-width: 480px) {
+  /* HEADER */
+  nav {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
 
-    /* TEXTO H1 DO CONTAINER SOBRE*/
-    .text_one {
-      font-size: 1rem;
-    }
+  .logo img {
+    height: 60px;
+  }
 
-    .text_two {
-      font-size: 0.5rem;
-    }
+  /* SLIDE HOME */
+  .slide-text {
+    font-size: 2rem;
+  }
 
-    /*CONTAINER DOS CARDS (IMPORTANCIA DOS EPIS)*/
-    .container_card {
-      grid-template-columns: 1fr;
-      min-height: auto;
-      width: 90%;
-      margin: 20px auto;
-    }
+  .swiper {
+    min-height: 35vh;
+  }
+
+  .swiper-slide .home-slide img {
+    max-height: 100%;
+    height: 35vh;
+  }
+
+  /* SEÇÃO (SOBRE) */
+  .text_sobre {
+    width: 40%;
+    height: 8%;
+    font-size: 0.9rem;
+  }
+  .text_one {
+    font-size: 2.6rem;
+  }
+
+  .text_two {
+    font-size: 1.2rem;
+  }
+
+  /* CONTAINER SLIDE E PRODUTOS */
+  .category-section h1 {
+    font-size: 1.4rem;
+    width: 80%;
+  }
+
+  #close-products {
+    right: 10px;
+    transform: translateX(0);
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-images {
+    height: 150px;
+  }
+
+  /* CONTAINER VEJA MAIS (VIDEOS) */
+  .text_vid {
+    font-size: 2.6rem;
+  }
+
+  /*CONTAINER DOS CARDS (IMPORTANCIA DOS EPIS)*/
+  .container_card {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    width: 70%;
+    margin: 20px auto;
+  }
+
+  .text_epi h3 {
+    text-align: initial;
+  }
+
+  /* CONTAINER MARCAS PARCEIROS */
+  .parceiros {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  /* CONTAINER FINAL ADRESS/CONTATO/REDES */
+  .container_final_sec {
+    width: 90%;
+  }
+
+  .container_contato .contato_icones {
+    text-align: center;
+  }
+
+  .logo_final {
+    width: 60%;
+    margin: 0;
   }
 }
