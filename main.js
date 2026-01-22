@@ -609,20 +609,42 @@ backdrop.addEventListener('click', () => {
 
 //CARROSSEL DAS MARCAS
 var swiper = new Swiper('.swiperMark', {
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   loop: true,
+  loopAdditionalSlides: 6,
   freeMode: true,
+  freeModeMomentum: false,
   speed: 4000,
   autoplay: {
-    delay: 1,
+    delay: 0,
     disableOnInteraction: false,
     pauseOnMouseEnter: false,
   },
-  loopAdditionalSlides: 6,
+  allowTouchMove: false,
+  simulateTouch: false,
+  grabCursor: false,
+
+  keyboard: false,
+  mousewheel: false,
+  preloadImages: true,
+  lazy: false,
+
+  watchSlidesProgress: true,
+  watchOverflow: true,
+
   breakpoints: {
-    320: { slidesPerView: 2, spaceBetween: 10 },
-    768: { slidesPerView: 3, spaceBetween: 20 },
-    1024: { slidesPerView: 5, spaceBetween: 30 },
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 50,
+    },
   },
 });
