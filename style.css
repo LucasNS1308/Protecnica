@@ -1,4 +1,7 @@
 /* RESET E ESTILO HTML/BODY/ */
+:root {
+  font-family: 'Poppins', sans-serif;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -7,7 +10,6 @@ body {
   width: 100%;
   min-height: 100vh;
   line-height: 1.5;
-  font-family: 'poppins' sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   background-color: #fff;
@@ -70,7 +72,9 @@ header {
   white-space: nowrap;
   opacity: 0;
   transform: translateY(6px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
   pointer-events: none;
 }
 
@@ -82,7 +86,9 @@ header {
 #menu a img {
   display: inline-block;
   font-size: 20px;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
 }
 
 #menu a:hover img {
@@ -150,7 +156,7 @@ header {
   left: 10%;
   color: #fff;
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 500;
   opacity: 0;
   transform: translateX(20px);
   transition: 0.6s ease;
@@ -250,24 +256,27 @@ header {
 .text_one {
   font-size: 4.8rem;
   color: #f7d304;
+  font-weight: 500;
 }
 
 .text_two {
   font-size: 3.8rem;
   color: #f5f5f5;
+  font-weight: 500;
 }
 
 /* CONTAINER CARROSEL DAS CATEGORIAS */
 .category-section {
   width: 100%;
-  margin-top: 3%;
+  margin-top: 100px;
 }
 
 .category-section .text_products {
   text-align: center;
   color: #1b1e47;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-size: 2rem;
+  font-weight: 500;
 }
 
 .categorySwiper {
@@ -369,7 +378,7 @@ header {
   object-fit: contain;
 }
 .product-card h3 {
-  color: #aaa;
+  color: #ccc;
   font-size: 1rem;
   text-align: center;
   margin: 10px auto;
@@ -465,19 +474,26 @@ header {
 }
 
 .text_vid {
-  font-family: 'poppins' sans-serif;
   font-size: 2rem;
   color: #fff;
   transition: 1s all ease;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
+  font-weight: 500;
 }
 
 /* CONTAINER IMPORTANCIA DO EPI */
-.text_epi {
-  margin-top: 10%;
+.text_epi h1 {
+  margin-top: 100px;
   text-align: center;
   color: #1b1e47;
+  font-weight: 500;
+}
+
+.text_epi h3 {
+  text-align: center;
+  color: #1b1e47;
+  font-weight: 400;
 }
 
 .container_card {
@@ -548,7 +564,7 @@ header {
 
 .card .back .heading {
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .card:hover .back {
@@ -565,18 +581,12 @@ header {
 
 /* CONTAINER MARCAS */
 .swiperMark {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
-  min-height: 30vh;
+  height: 200px;
   overflow: hidden;
 }
 
 .swiperMark .swiper-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transition-timing-function: linear;
 }
 
@@ -588,14 +598,16 @@ header {
 }
 
 .seçao-mark {
-  margin: 10% auto;
+  margin: 200px auto 100px auto;
 }
 
 .text-mark {
   display: flex;
   justify-content: center;
-  margin: 0px;
+  margin-bottom: 20px;
   padding: 0px;
+  font-weight: 500;
+  color: #1b1e47;
 }
 
 /*  CONTAINER FINAL / IMAGEM/ ENDEREÇO/ CONTATO/ REDES SOCIAIS*/
@@ -642,15 +654,19 @@ header {
 .container_final h2 {
   font-size: 1.5rem;
   border: none;
-  color: #ffffff;
+  color: #ccc;
+  font-weight: 500;
 }
 
-.container_address h4,
-p {
+.container_address p {
   margin: 0px;
   font-size: 0.9rem;
+  font-weight: 200;
   color: #fff;
-  font-weight: bold;
+}
+
+.container_address h4 {
+  color: #ccc;
 }
 
 .contato_icones {
@@ -666,9 +682,8 @@ p {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .contato_icones img:hover {
@@ -694,8 +709,7 @@ p {
   gap: 10px;
   text-decoration: none;
   font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
+  font-weight: 200;
   transform: scale(1);
 }
 
@@ -734,7 +748,7 @@ footer {
   height: 40px;
   color: #fff;
   font-size: 1rem;
-  font-family: 'poppins', sans-serif;
+  /* font-family: 'poppins', sans-serif; */
 }
 
 /*-----------------------------@MEDIA QUERIA RESPONSIVO-------------*/
