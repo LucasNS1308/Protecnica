@@ -319,12 +319,15 @@ header {
 /* SEÇÃO DE PRODUTOS*/
 .products-section {
   width: 100%;
+  max-width: 1100px;
   display: none;
   justify-content: center;
+  margin: 40px auto;
   opacity: 0;
   transition: opacity 0.4s ease;
   margin-top: 40px;
   position: relative;
+  justify-content: center;
 }
 
 .products-section.visible {
@@ -338,7 +341,6 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   width: 100%;
-  max-width: 1200px;
   padding: 10px;
   justify-items: center;
   border: 1px solid #ddd;
@@ -355,6 +357,7 @@ header {
   border: 1px solid #ddd;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   opacity: 0;
   transform: translateY(15px);
   animation: fadeCard 0.4s ease forwards;
@@ -378,14 +381,14 @@ header {
   object-fit: contain;
 }
 .product-card h3 {
-  color: #ccc;
+  color: #333;
   font-size: 1rem;
   text-align: center;
   margin: 10px auto;
 }
 
 .product-card p {
-  color: #aaa;
+  color: #666;
   font-size: 12px;
   margin-left: 10px;
 }
@@ -429,8 +432,11 @@ header {
 
 .close-products-btn {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 10px;
-  right: 19%;
+  right: 3px;
   background: #fff;
   border: 2px solid #aaa;
   width: 32px;
@@ -440,6 +446,7 @@ header {
   font-size: 20px;
   line-height: 26px;
   transition: 0.2s;
+  z-index: 10;
 }
 
 .close-products-btn:hover {
@@ -449,14 +456,17 @@ header {
 }
 
 /* CONTAINER DE VIDEOS */
-.container_vid {
+.container_video {
   width: 100%;
+  height: auto;
   padding: 50px 0;
-  background-color: #1b1e47;
-  margin-top: 10%;
+  background-image: url(./img/bg/bg.video.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10% auto;
 }
 
-.container_sec_vid {
+.container_sec_video {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -465,7 +475,7 @@ header {
   gap: 30px;
 }
 
-.container_sec_vid iframe {
+.container_sec_video iframe {
   width: 100%;
   max-width: 450px;
   aspect-ratio: 16 / 9;
@@ -473,7 +483,7 @@ header {
   border: none;
 }
 
-.text_vid {
+.text_video {
   font-size: 2rem;
   color: #fff;
   transition: 1s all ease;
@@ -618,7 +628,7 @@ header {
   flex-wrap: wrap;
   align-items: flex-start;
   width: 100%;
-  min-height: 20vh;
+  min-height: 50vh;
   background-color: #000000e0;
   gap: 100px;
 }
@@ -672,7 +682,7 @@ header {
 .contato_icones {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   width: 100%;
   filter: brightness(0) invert(1);
 }
@@ -748,7 +758,6 @@ footer {
   height: 40px;
   color: #fff;
   font-size: 1rem;
-  /* font-family: 'poppins', sans-serif; */
 }
 
 /*-----------------------------@MEDIA QUERIA RESPONSIVO-------------*/
@@ -825,7 +834,7 @@ footer {
   }
 
   .slide-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   /* CONTAINER VALOR DA EMPRESA */
@@ -836,7 +845,7 @@ footer {
   }
 
   .card_valor {
-    width: 45%;
+    width: 50%;
     border: none;
     margin-bottom: 30px;
     padding: 10px;
@@ -866,8 +875,14 @@ footer {
   .product-card {
     padding: 15px;
   }
-
+  /* CONTAINER VEJA MAIS (VIDEOS) */
+  .container_video {
+    height: auto;
+    padding: 30px 0;
+  }
+  /* CONTAINER FINAL ADRESS/CONTATO/REDES */
   .container_final_sec {
+    width: 50%;
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
@@ -881,14 +896,14 @@ footer {
     justify-content: center;
   }
 
-  .container_contato a {
-    width: 100%;
-    text-align: center;
+  .container_address {
+    text-align: initial;
   }
 
   .container_contato a {
     display: flex;
-    justify-content: center;
+    justify-content: initial;
+    align-items: baseline;
   }
 
   .logo_final {
@@ -952,8 +967,18 @@ footer {
   }
 
   #close-products {
-    right: 10px;
+    right: 30px;
     transform: translateX(0);
+  }
+
+  .product-card {
+    max-width: 100%;
+    min-height: auto;
+    padding-bottom: 20px;
+  }
+
+  .product-images {
+    height: 200px;
   }
 
   .products-grid {
@@ -965,6 +990,10 @@ footer {
   }
 
   /* CONTAINER VEJA MAIS (VIDEOS) */
+  .container_video {
+    overflow: hidden;
+  }
+
   .text_vid {
     font-size: 2.6rem;
   }
