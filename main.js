@@ -25,6 +25,7 @@ const swiper2 = new Swiper('.categorySwiper', {
     disableOnInteraction: false,
     pauseOnMouseEnter: false,
   },
+  
 
   loopAdditionalSlides: 6,
   breakpoints: {

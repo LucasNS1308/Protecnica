@@ -37,11 +37,13 @@ header {
   align-items: center;
   background-color: #1b1e47;
   width: 100%;
-  padding: 20px 40px;
+  min-height: 100px;
+  position: fixed;
+  z-index: 100000;
 }
 
 .logo img {
-  height: 90px;
+  height: 45px;
   width: auto;
 }
 
@@ -460,9 +462,7 @@ header {
   width: 100%;
   height: auto;
   padding: 50px 0;
-  background-image: url(./img/bg/bg.video.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-color: #1b1e47;
   margin: 10% auto;
 }
 
