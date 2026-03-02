@@ -25,7 +25,6 @@ const swiper2 = new Swiper('.categorySwiper', {
     disableOnInteraction: false,
     pauseOnMouseEnter: false,
   },
-  
 
   loopAdditionalSlides: 6,
   breakpoints: {
@@ -649,3 +648,6 @@ var swiper = new Swiper('.swiperMark', {
     },
   },
 });
+
+const video = document.getElementById('vid_home');
+video.addEventListener('play', () => {});
